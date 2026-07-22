@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>High Paying Companies — India Tech Jobs</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #fafaf8;
+  --surface: #ffffff;
+  --surface2: #f4f4f0;
+  --border: rgba(0,0,0,0.08);
+  --border2: rgba(0,0,0,0.14);
+  --text: #1a1a18;
+  --text2: #5a5a54;
+  --text3: #8a8a82;
+  --accent: #1a472a;
+  --accent-bg: #e8f5ee;
+  --accent-text: #0f3d20;
+  --blue-bg: #e8f0fa;
+  --blue-text: #1a3a6e;
+  --amber-bg: #fdf3e0;
+  --amber-text: #6b4400;
+  --red-bg: #fdecea;
+  --red-text: #6e1a1a;
+  --purple-bg: #f0eeff;
+  --purple-text: #3a2a8c;
+  --mono: 'DM Mono', monospace;
+  --sans: 'DM Sans', sans-serif;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--sans); background: var(--bg); color: var(--text); font-size: 14px; line-height: 1.5; }
+a { color: inherit; text-decoration: none; }
+
+.page { max-width: 1400px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; display: flex; gap: 28px; align-items: flex-start; }
+.main-col { flex: 1 1 0; min-width: 0; }
+.todo-col { width: 280px; flex-shrink: 0; position: sticky; top: 24px; }
+.todo-panel { background: var(--surface); border: 1px solid var(--border2); border-radius: 12px; padding: 1.25rem; }
+.todo-panel h2 { font-size: 14px; font-weight: 500; margin-bottom: 1rem; color: var(--text); display: flex; align-items: center; gap: 8px; }
+.todo-panel h2 span.count { font-size: 11px; font-weight: 400; color: var(--text3); background: var(--surface2); padding: 2px 7px; border-radius: 99px; font-family: var(--mono); }
+.todo-add { display: flex; gap: 6px; margin-bottom: 1rem; }
+.todo-add input { flex: 1; min-width: 0; padding: 7px 10px; border: 1px solid var(--border2); border-radius: 8px; font-family: var(--sans); font-size: 12px; color: var(--text); background: var(--bg); outline: none; }
+.todo-add input:focus { border-color: var(--accent); }
+.todo-add button { padding: 7px 12px; background: var(--accent); color: #fff; border: none; border-radius: 8px; font-family: var(--sans); font-size: 12px; font-weight: 500; cursor: pointer; white-space: nowrap; }
+.todo-add button:hover { background: #0f3d20; }
+.todo-list { display: flex; flex-direction: column; gap: 5px; max-height: 520px; overflow-y: auto; }
+.todo-item { display: flex; align-items: flex-start; gap: 8px; padding: 8px 10px; border-radius: 8px; background: var(--surface2); border: 1px solid transparent; transition: border-color .1s; }
+.todo-item:hover { border-color: var(--border2); }
+.todo-item.done { opacity: .55; }
+.todo-item input[type=checkbox] { margin-top: 2px; flex-shrink: 0; accent-color: var(--accent); cursor: pointer; width: 14px; height: 14px; }
+.todo-item .todo-text { flex: 1; font-size: 12px; color: var(--text); line-height: 1.45; word-break: break-word; }
+.todo-item.done .todo-text { text-decoration: line-through; color: var(--text3); }
+.todo-item .del-btn { flex-shrink: 0; background: none; border: none; cursor: pointer; color: var(--text3); font-size: 14px; line-height: 1; padding: 0 2px; }
+.todo-item .del-btn:hover { color: #b91c1c; }
+.todo-empty { font-size: 12px; color: var(--text3); text-align: center; padding: 1.5rem 0; }
+.todo-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); }
+.todo-footer span { font-size: 11px; color: var(--text3); font-family: var(--mono); }
+.todo-footer button { font-size: 11px; color: #b91c1c; background: none; border: none; cursor: pointer; font-family: var(--sans); }
+.todo-footer button:hover { text-decoration: underline; }
+@media (max-width: 900px) { .page { flex-direction: column; } .todo-col { width: 100%; position: static; } }
+
+.hero { margin-bottom: 2.5rem; border-bottom: 1px solid var(--border); padding-bottom: 2rem; }
+.hero-eyebrow { font-size: 11px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--text3); font-family: var(--mono); margin-bottom: .75rem; }
+.hero h1 { font-size: clamp(26px,4vw,42px); font-weight: 300; line-height: 1.1; letter-spacing: -.02em; margin-bottom: .75rem; }
+.hero h1 strong { font-weight: 500; }
+.hero p { font-size: 14px; color: var(--text2); max-width: 520px; }
+
+.stats-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px,1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 2rem; }
+.stat { background: var(--surface); padding: 1rem 1.25rem; }
+.stat-n { font-size: 28px; font-weight: 300; letter-spacing: -.03em; font-family: var(--mono); }
+.stat-n.green { color: var(--accent); }
+.stat-n.blue { color: #1a3a8c; }
+.stat-l { font-size: 11px; color: var(--text3); margin-top: 2px; text-transform: uppercase; letter-spacing: .06em; }
+
+.controls { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 1rem; align-items: center; }
+.search-wrap { position: relative; flex: 1 1 220px; min-width: 0; }
+.search-wrap svg { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); opacity: .4; pointer-events: none; }
+#q { width: 100%; padding: 9px 12px 9px 36px; border: 1px solid var(--border2); border-radius: 8px; background: var(--surface); font-family: var(--sans); font-size: 13px; color: var(--text); outline: none; transition: border-color .15s; }
+#q:focus { border-color: var(--accent); }
+select { padding: 9px 12px; border: 1px solid var(--border2); border-radius: 8px; background: var(--surface); font-family: var(--sans); font-size: 13px; color: var(--text); outline: none; cursor: pointer; }
+select:focus { border-color: var(--accent); }
+
+.slider-row { display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; font-size: 12px; color: var(--text2); }
+input[type=range] { flex: 1; max-width: 200px; accent-color: var(--accent); cursor: pointer; }
+.slider-val { font-family: var(--mono); font-size: 12px; font-weight: 500; color: var(--text); background: var(--surface2); padding: 3px 8px; border-radius: 6px; min-width: 88px; }
+
+.pills { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 1.25rem; }
+.pill { font-size: 11px; padding: 5px 12px; border-radius: 99px; cursor: pointer; border: 1px solid var(--border2); background: var(--surface); color: var(--text2); font-weight: 400; transition: all .12s; white-space: nowrap; }
+.pill:hover { border-color: var(--accent); color: var(--accent); }
+.pill.on { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 500; }
+
+.result-info { font-size: 12px; color: var(--text3); margin-bottom: .75rem; font-family: var(--mono); }
+
+.tbl-wrap { border: 1px solid var(--border2); border-radius: 12px; overflow: hidden; overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; table-layout: fixed; min-width: 700px; }
+thead { background: var(--surface2); }
+th { padding: 10px 14px; text-align: left; font-size: 10px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--text3); border-bottom: 1px solid var(--border); white-space: nowrap; font-family: var(--mono); }
+td { padding: 11px 14px; border-bottom: 1px solid var(--border); vertical-align: middle; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+tbody tr:last-child td { border-bottom: none; }
+tbody tr.data-row { cursor: pointer; transition: background .1s; }
+tbody tr.data-row:hover td { background: var(--surface2); }
+tbody tr.data-row.open td { background: #f0f5f0; }
+tbody tr.exp-row td { white-space: normal; background: #f0f5f0; font-size: 12px; color: var(--text2); line-height: 1.7; border-bottom: 1px solid var(--border); padding: 10px 16px 14px; }
+.exp-row td::before { content: "↳ "; color: var(--accent); font-weight: 500; }
+
+.co-name { font-weight: 500; color: var(--text); }
+.pay { font-family: var(--mono); font-size: 12px; font-weight: 500; color: var(--accent-text); background: var(--accent-bg); padding: 3px 8px; border-radius: 6px; display: inline-block; }
+
+.badge { display: inline-block; font-size: 10px; font-weight: 500; padding: 3px 9px; border-radius: 99px; line-height: 1.4; white-space: nowrap; }
+.bwfh { background: #e6faf2; color: #0a5c3a; border: 1px solid #b3e8d0; }
+.bwfo { background: #fdecea; color: #6e1a1a; border: 1px solid #f2b2ac; }
+.bhyb { background: #e8f0fa; color: #1a3a6e; border: 1px solid #b3c8f0; }
+
+.wlb-wrap { display: flex; align-items: center; gap: 6px; }
+.wlb-dots { display: flex; gap: 3px; }
+.wd { width: 7px; height: 7px; border-radius: 50%; background: var(--border2); }
+.wd.on { background: var(--accent); }
+.wlb-lbl { font-size: 11px; color: var(--text3); }
+
+.src-badge { display: inline-block; font-family: var(--mono); font-size: 10px; font-weight: 500; padding: 2px 7px; border-radius: 5px; }
+.sLC { background: #e6faf2; color: #0a5c3a; }
+.sBL { background: #e8f0fa; color: #1a3a6e; }
+.sGV { background: #fdf3e0; color: #6b4400; }
+.sLV { background: #f0eeff; color: #3a2a8c; }
+.sGD { background: #fdecea; color: #6e1a1a; }
+
+.apply-link { display: inline-flex; align-items: center; gap: 4px; font-size: 11px; font-weight: 500; color: #1a3a8c; padding: 4px 10px; border: 1px solid #b3c8f0; border-radius: 7px; background: var(--surface); cursor: pointer; font-family: var(--sans); transition: background .12s; white-space: nowrap; }
+.apply-link:hover { background: var(--blue-bg); }
+.apply-link svg { flex-shrink: 0; }
+
+.nodata { padding: 3rem; text-align: center; color: var(--text3); font-size: 14px; }
+.status-sel { width: 100%; padding: 5px 8px; border: 1px solid var(--border2); border-radius: 7px; background: var(--surface); font-family: var(--sans); font-size: 12px; color: var(--text); cursor: pointer; outline: none; }
+.status-sel:focus { border-color: var(--accent); }
+.status-sel option { font-size: 13px; }
+
+.legend { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 1.5rem; font-size: 11px; color: var(--text3); align-items: center; }
+.legend-item { display: flex; align-items: center; gap: 5px; }
+
+.footer { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-size: 11px; color: var(--text3); line-height: 1.8; }
+
+@media (max-width: 640px) {
+  .page { padding: 1.5rem 1rem 3rem; }
+  .hero h1 { font-size: 24px; }
+  .stats-row { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+<div class="main-col">
+  <div class="hero">
+    <div class="hero-eyebrow">India · Software Engineering · 2024–2026</div>
+    <h1>High paying companies<br><strong>for software engineers</strong></h1>
+    <p>212 companies paying ₹30+ LPA for ~3 years of experience. Salary, work mode, WLB and career links — sourced from LeetCode Discuss, Blind, Grapevine and Levels.fyi.</p>
+  </div>
+
+  <div class="stats-row" id="stats-row"></div>
+
+  <div class="controls">
+    <div class="search-wrap">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="search" id="q" placeholder="Search company, city, domain…" oninput="render()">
+    </div>
+    <select id="mod" onchange="render()">
+      <option value="">All work modes</option>
+      <option>WFH</option><option>Hybrid</option><option>WFO</option>
+    </select>
+    <select id="srt" onchange="render()">
+      <option value="lo">Highest min pay first</option>
+      <option value="hi">Highest max pay first</option>
+      <option value="wlb">Best WLB first</option>
+      <option value="az">A to Z</option>
+    </select>
+  </div>
+
+  <div class="slider-row">
+    <span>Min pay</span>
+    <input type="range" min="25" max="80" step="5" value="25" id="minp" oninput="document.getElementById('sv').textContent='₹'+this.value+'+ LPA';render()">
+    <span class="slider-val" id="sv">₹25+ LPA</span>
+  </div>
+
+  <div class="legend">
+    <span class="legend-item"><span class="badge bwfh">WFH</span> Remote / work from home</span>
+    <span class="legend-item"><span class="badge bhyb">Hybrid</span> Part office, part remote</span>
+    <span class="legend-item"><span class="badge bwfo">WFO</span> Office 5 days</span>
+    <span class="legend-item"><span class="src-badge sLC">LC</span> LeetCode Discuss</span>
+    <span class="legend-item"><span class="src-badge sBL">BL</span> Blind</span>
+    <span class="legend-item"><span class="src-badge sGV">GV</span> Grapevine</span>
+    <span class="legend-item"><span class="src-badge sLV">LV</span> Levels.fyi</span>
+    <span class="legend-item"><span class="src-badge sGD">GD</span> Glassdoor</span>
+  </div>
+
+  <div class="pills" id="pills"></div>
+  <div class="result-info" id="rc"></div>
+
+  <div class="tbl-wrap">
+    <table id="tbl">
+      <thead><tr>
+        <th style="width:26%">Company</th>
+        <th style="width:14%">Salary (CTC)</th>
+        <th style="width:9%">Mode</th>
+        <th style="width:12%">Apply</th>
+        <th style="width:27%">My Status</th>
+        <th style="width:12%">Source</th>
+      </tr></thead>
+      <tbody id="tbody"></tbody>
+    </table>
+    <div class="nodata" id="nodata" style="display:none">No companies match your filters — try widening them.</div>
+  </div>
+
+  <div class="footer">
+    <strong>Sources:</strong> LeetCode Discuss (LC) · TeamBlind (BL) · Grapevine (GV) · Levels.fyi (LV) · Glassdoor (GD) · AmbitionBox · 2024–2026 compensation data.<br>
+    <strong>Salary</strong> = total CTC including base salary + RSU/ESOP annualised over vesting period + annual bonus. Actual in-hand may be 50–70% of CTC in year 1 due to vesting schedules.<br>
+    Click any row to see insider notes from real engineers. Status selections are saved in your browser.
+  </div>
+</div>
+<div class="todo-col">
+  <div class="todo-panel">
+    <h2>📝 My TODOs <span class="count" id="todo-count">0</span></h2>
+    <div class="todo-add">
+      <input type="text" id="todo-input" placeholder="Add a todo..." maxlength="200" onkeydown="if(event.key==='Enter')addTodo()">
+      <button onclick="addTodo()">Add</button>
+    </div>
+    <div class="todo-list" id="todo-list"></div>
+    <div class="todo-footer">
+      <span id="todo-done-count">0 done</span>
+      <button onclick="clearDone()">Clear done</button>
+    </div>
+  </div>
+</div>
+</div>
+<script>
+const CM={BT:"Big Tech",IU:"Indian Unicorn",BF:"Banking / Fintech",CD:"Cloud / Data",ES:"Enterprise SaaS",HQ:"HFT / Quant",SC:"Semiconductor / Deep-tech",GR:"GCC / Retail",GN:"GCC / Networking",CY:"Cybersecurity",HT:"Healthcare",SR:"Startup / Remote",RF:"Remote-First Gems",FG:"Foreign Co. Hiring India"};
+const MM={W:"WFH",H:"Hybrid",O:"WFO"};
+const WL=["","Demanding","Moderate","OK","Good","Excellent"];
+const D=[
+["Google","BT","₹50–70 LPA",50,70,4,"H","Bengaluru / Hyderabad / Pune","https://careers.google.com","L4/L5 band; strong RSU component. SDE2 total comp well above 50 LPA. Hyderabad L3/L4 also available.","LV"],
+["Microsoft","BT","₹45–70 LPA",45,70,4,"H","Hyderabad / Bengaluru / Gurgaon","https://careers.microsoft.com","L62 band; Azure/cloud roles highest. Multiple India offices. Active hiring across locations.","LV"],
+["Meta","BT","₹50–80 LPA",50,80,4,"H","Bengaluru / Hyderabad","https://metacareers.com","Blind 2026 #1 median TC in India. E4/E5 band; aggressive RSU refresh. Bengaluru office expanding.","BL"],
+["Amazon","BT","₹40–55 LPA",40,55,2,"O","Bengaluru / Hyderabad","https://amazon.jobs","LC Oct 2025: SDE2 L5 base ₹35.5L + ₹17L sign-on yr1 + 220 RSU = ~₹55 LPA. Strict 5-day RTO policy.","LC"],
+["Apple","BT","₹45–60 LPA",45,60,4,"H","Bengaluru / Hyderabad","https://apple.com/careers/in","ICT3/ICT4 band. Strong for chip/AI/ML roles. Apple India hiring for hardware + software engineering.","LV"],
+["Uber","BT","₹45–70 LPA",45,70,3,"H","Bengaluru","https://ubercareers.com","L5A can cross ₹1.2 Cr for senior roles. Good engineering culture with real scale challenges.","LV"],
+["LinkedIn","BT","₹40–65 LPA",40,65,4,"H","Bengaluru","https://careers.linkedin.com","LC Mar 2025: SE base ₹38L + ₹3.8L bonus + 86k USD RSU = ~₹61 LPA yr1. Part of Microsoft.","LC"],
+["Airbnb","BT","₹45–70 LPA",45,70,5,"W","Remote / Bengaluru","https://careers.airbnb.com","Live & Work Anywhere policy. Top WLB in big tech. Limited India engineering roles — check portal.","BL"],
+["Netflix","BT","₹50–80 LPA",50,80,4,"H","Bengaluru","https://jobs.netflix.com","Very high cash salaries; no RSU grind. Limited India roles but among best-paying.","LV"],
+["Flipkart","BT","₹40–50 LPA",40,50,3,"H","Bengaluru","https://careers.flipkart.com","LC Mar 2025: SDE2 offer ₹43–44 LPA (34L base + 10% bonus + 6L stocks). Negotiable.","LC"],
+["Swiggy","IU","₹40–60 LPA",40,60,3,"H","Bengaluru","https://careers.swiggy.com","LC verified: SDE2 TC ₹57.5L (19.5L base + 8L joining bonus + 30L stocks/4yr).","LC"],
+["Zomato","IU","₹38–55 LPA",38,55,3,"H","Gurgaon","https://zomato.com/careers","Active hiring. ML/platform engineers highest paid. Parent Eternal Ltd also growing.","BL"],
+["PhonePe","IU","₹35–55 LPA",35,55,3,"O","Bengaluru","https://phonepe.com/en-in/careers.html","Walmart-backed. Strict WFO policy. Strong for payments infra and backend engineers.","BL"],
+["Meesho","IU","₹40–60 LPA",40,60,3,"H","Bengaluru","https://careers.meesho.com","Can pay ₹60L base at senior levels. 29 open positions May 2026. ML-heavy org.","BL"],
+["CRED","IU","₹40–60 LPA",40,60,3,"O","Bengaluru","https://cred.club/careers","Known for top-of-band offers. Strict WFO. High interview bar — DSA + system design.","BL"],
+["Navi Technologies","IU","₹40–60 LPA",40,60,4,"H","Bengaluru","https://navi.com/careers","Sachin Bansal's fintech. Grapevine Tier 2 (60L+). Growing fast in lending + insurance.","GV"],
+["Zeta","IU","₹40–55 LPA",40,55,4,"H","Bengaluru / Mumbai","https://www.zeta.tech/in/careers","Banking SaaS unicorn. Grapevine Tier 2. Blind most desired companies list 2026.","GV"],
+["Dream11","IU","₹40–60 LPA",40,60,3,"O","Mumbai","https://careers.dream11.com","Fantasy sports unicorn. Strict 5-day WFO Mumbai. High comp for gaming/ML engineers.","BL"],
+["ShareChat / Moj","IU","₹40–60 LPA",40,60,3,"H","Bengaluru","https://careers.sharechat.com","ML/backend infra roles especially well-paid. Short-video + social media scale.","BL"],
+["InMobi","IU","₹40–60 LPA",40,60,4,"H","Bengaluru","https://inmobi.com/company/careers","India's first unicorn; ad-tech. Grapevine Tier 2 (60L+). OEM partnerships + ad platform.","GV"],
+["Blinkit","IU","₹40–60 LPA",40,60,3,"O","Gurgaon","https://jobs.blinkit.com","Blind: fat bands for senior roles. Q-commerce delivery infra at massive scale.","BL"],
+["Urban Company","IU","₹45–55 LPA",45,55,4,"H","Gurgaon / Bengaluru","https://urbancompany.com/careers","LC confirmed: SDE2 offer of 50 LPA for ~2.75 YOE. Marketplace + logistics infra.","LC"],
+["Airtel X Labs","IU","₹40–60 LPA",40,60,4,"H","Gurgaon","https://airtel.in/careers","Startup-within-Airtel building fintech + 5G products. Pays product company salaries.","BL"],
+["Gojek / GoTo","IU","₹55–75 LPA",55,75,4,"H","Bengaluru","https://gotogroup.com/careers","SEA super app. Grapevine Tier 2 (60L+). Highly underrated by Indian devs.","GV"],
+["Hotstar / JioHotstar","IU","₹40–55 LPA",40,55,3,"H","Bengaluru / Gurgaon","https://www.jiocinema.com/careers","LC verified: SDE2 TC ~₹50 LPA (38.4L + 2L signing + 35k USD stock + 3.6L bonus).","LC"],
+["FanCode","IU","₹40–55 LPA",40,55,3,"H","Mumbai","https://fancode.com/careers","Dream11 group company. Sports streaming + commerce tech. LC Dec 2024 mention.","LC"],
+["Razorpay","IU","₹35–55 LPA",35,55,3,"H","Bengaluru","https://razorpay.com/jobs","No DSA rounds for SDE-2+. ESOP buybacks regular. Senior SDE hits 50+ LPA.","BL"],
+["Media.net","IU","₹50–80 LPA",50,80,4,"O","Mumbai / Bengaluru","https://media.net/careers","Directi group contextual ad-tech. SDE-2 base 40L+ total 50–80 LPA. Hidden gem in ad-tech.","BL"],
+["BrowserStack","ES","₹40–65 LPA",40,65,4,"H","Mumbai / Bengaluru","https://browserstack.com/careers","Software testing platform. India HQ. SDE-2 easily >40 LPA. Very underrated.","BL"],
+["Kotak Mahindra Bank","BF","₹40–52 LPA",40,52,2,"O","Bengaluru / Mumbai","https://kotak.com/career","LC Oct 2025: SDE2 base ₹35L + ₹3.5L bonus + ₹10L deferred cash/yr = ~₹51.5 LPA. 5-day WFO.","LC"],
+["Goldman Sachs","BF","₹40–62 LPA",40,62,3,"O","Bengaluru / Hyderabad","https://goldmansachs.com/careers","Senior tech roles hit ₹62 LPA. Strong brand. Strict WFO culture.","GD"],
+["Morgan Stanley","BF","₹40–55 LPA",40,55,3,"H","Mumbai / Bengaluru","https://morganstanley.com/careers","Quant devs + risk engineers. Mumbai and Bengaluru tech centers.","BL"],
+["Bloomberg","BF","₹55–70 LPA",55,70,3,"H","Pune","https://bloomberg.com/careers","Blind: fresher gets 30L base; 3 YOE hits 55+. Terminal infra + financial data work.","BL"],
+["BlackRock","BF","₹40–55 LPA",40,55,4,"H","Gurgaon","https://blackrock.com/careers","Associate/SSE level. Gurgaon office. Strong brand for fintech SWEs.","LC"],
+["Deutsche Bank","BF","₹40–50 LPA",40,50,3,"H","Bengaluru / Mumbai / Pune","https://db.com/careers","L4 pay crosses 40+ at 3 YOE. Mid-band competitive for banking tech roles.","BL"],
+["Arcesium","BF","₹40–60 LPA",40,60,4,"O","Hyderabad / Bengaluru / Gurgaon","https://arcesium.com/careers","D.E. Shaw spinoff. Blind: SDE2 total 40–60 LPA (base 25–35L + stocks 12–13L/yr).","BL"],
+["D.E. Shaw","BF","₹60–120 LPA",60,120,3,"O","Hyderabad","https://deshaw.com/careers","Legendary fintech firm. SWE + quant both well paid. Very selective, campus-heavy.","LV"],
+["Zerodha","BF","₹40–92 LPA",40,92,5,"W","Bengaluru","https://zerodha.com/careers","Levels.fyi median ₹9.19M. Bootstrapped unicorn; tiny team, huge pay, rare openings.","LV"],
+["slice","BF","₹28–48 LPA",28,48,3,"H","Bengaluru","https://www.sliceit.com/careers","Fintech (now a bank). Credit + payments infra. Strong eng, good comp.","GD"],
+["Groww","BF","₹25–50 LPA",25,50,4,"H","Bengaluru","https://groww.in/about/careers","(YC S16) India's largest stock broker & mutual fund platform. $5B+ unicorn. Solid engineering culture, good India pay, Bengaluru HQ. SDE roles at ₹25-50 LPA.","BL"],
+["Upstox","BF","₹35–55 LPA",35,55,4,"H","Mumbai / Bengaluru","https://upstox.com/company/careers","Tiger Global backed discount broker. Growing tech team.","BL"],
+["Angel One","BF","₹40–55 LPA",40,55,4,"H","Mumbai / Bengaluru","https://angelone.in/careers","Listed fintech. Growing product tech team. Often overlooked.","GD"],
+["Epifi (Fi Money)","BF","₹40–60 LPA",40,60,4,"H","Bengaluru","https://fi.money/careers","Ex-Google founders. Small team, high ownership, strong comp.","BL"],
+["C2FO","BF","₹40–55 LPA",40,55,4,"H","Pune / Gurgaon","https://c2fo.com/careers","Blind Pune top-10 paymaster. Working capital fintech.","BL"],
+["Avalara","BF","₹40–55 LPA",40,55,4,"H","Pune / Bengaluru","https://avalara.com/careers","Tax SaaS; Vista Equity acquired. Stable pay, good WLB.","BL"],
+["Juspay","BF","₹28–50 LPA",28,50,3,"H","Bengaluru","https://juspay.io/careers","Payments-orchestration unicorn (powers UPI infra). Strong eng, Haskell+Scala, good comp.","GD"],
+["ClearTax","BF","₹35–50 LPA",35,50,4,"H","Bengaluru","https://cleartax.in/careers","Tax + compliance SaaS. Growing post-GST era.","BL"],
+["INDmoney","BF","₹35–50 LPA",35,50,3,"O","Gurgaon","https://indmoney.com/careers","LC Mar 2025: SDE2 base 32L + 3L bonus. Growing wealth platform.","LC"],
+["Wise","FG","₹35–58 LPA",35,58,4,"H","Remote / Hyderabad","https://wise.jobs/","Cross-border money (listed). Hyderabad office + remote. Payments infra, strong culture.","LV"],
+["Pine Labs","BF","₹35–55 LPA",35,55,3,"H","Noida / Bengaluru","https://pinelabs.com/careers","POS fintech unicorn. India HQ.","GD"],
+["PayU","BF","₹35–55 LPA",35,55,3,"H","Bengaluru / Noida","https://payu.in/about-us/careers","Prosus-backed payments. India HQ. Competitive fintech pay.","GD"],
+["MSCI","BF","₹40–65 LPA",40,65,4,"H","Mumbai / Bengaluru","https://msci.com/careers","Risk analytics and indices. India tech hub. Pays >40 LPA. Underrated.","GD"],
+["S&P Global","BF","₹35–55 LPA",35,55,4,"H","Hyderabad / Mumbai","https://careers.spglobal.com","Financial data. Large India engineering team.","GD"],
+["Moody's","BF","₹35–50 LPA",35,50,4,"H","Bengaluru / Pune","https://careers.moodys.com","Credit ratings. India tech center.","GD"],
+["LSEG (Refinitiv)","BF","₹25–45 LPA",25,45,4,"H","Bengaluru","https://www.lseg.com/en/careers","London Stock Exchange Group tech centre. Market-data platforms, trading infra. Good WLB.","GD"],
+["FactSet","BF","₹35–55 LPA",35,55,4,"H","Hyderabad","https://factset.com/careers","Financial data analytics. Large Hyderabad center.","GD"],
+["Murex","BF","₹40–65 LPA",40,65,3,"O","Mumbai","https://murex.com/about/careers","Capital markets software. Mumbai office. High pay — hidden gem for fintech SWEs.","BL"],
+["FICO","BF","₹35–55 LPA",35,55,4,"H","Bengaluru","https://fico.com/careers","Decision management platform. India R&D center.","GD"],
+["Optum (UHG)","HT","₹45–57 LPA",45,57,4,"H","Hyderabad / Bengaluru","https://uhg.hr/optum","Glassdoor: Senior Full Stack 45.3L base + 8.65L bonus + 3L joining = 57 LPA yr1.","GD"],
+["Databricks","CD","₹62–172 LPA",62,172,4,"H","Bengaluru","https://databricks.com/company/careers","L3 median ₹61L; max ₹172L. Top India paymaster 2025. Data + AI platform.","LV"],
+["Glean","CD","₹66–168 LPA",66,168,4,"H","Bengaluru","https://glean.com/careers","Levels.fyi: median ₹127L; backend SE max ₹168L. AI enterprise search.","LV"],
+["Broadcom / VMware","CD","₹60–160 LPA",60,160,4,"H","Bengaluru / Pune","https://careers.broadcom.com","Blind 2026 #2 highest median TC in India ($205k). Post-VMware acquisition.","BL"],
+["Snowflake","CD","₹45–65 LPA",45,65,4,"H","Bengaluru","https://careers.snowflake.com","Cloud data warehouse. Strong India engineering team.","LV"],
+["Confluent","CD","₹40–65 LPA",40,65,4,"H","Bengaluru","https://confluent.io/careers","Kafka company. Distributed systems focus. Startup culture.","BL"],
+["Harness","CD","₹45–60 LPA",45,60,4,"H","Bengaluru","https://harness.io/company/careers","50+ TC possible at barely 2 YOE per Blind thread.","BL"],
+["Datadog","CD","₹40–60 LPA",40,60,4,"H","Bengaluru","https://careers.datadoghq.com","Observability SaaS. SRE/backend roles hit 40+ at mid-level.","LV"],
+["Druva","CD","₹40–60 LPA",40,60,4,"H","Pune","https://druva.com/company/careers","Cloud data protection unicorn. Pune HQ.","BL"],
+["Rubrik","CD","₹40–55 LPA",40,55,4,"H","Bengaluru / Pune","https://rubrik.com/company/careers","Cybersecurity/cloud backup. IPO'd 2024.","LV"],
+["Cohesity","CD","₹40–55 LPA",40,55,4,"H","Bengaluru / Pune","https://cohesity.com/company/careers","Hyperconverged storage. Solid for infra engineers.","BL"],
+["Nutanix","CD","₹40–55 LPA",40,55,4,"H","Bengaluru","https://careers.nutanix.com","Grapevine Tier 2 (60L+). Cloud infra India R&D center.","GV"],
+["PagerDuty","CD","₹40–55 LPA",40,55,4,"W","Remote / Bengaluru","https://pagerduty.com/company/careers","WFH-first. Solid for SRE/DevOps engineers.","LV"],
+["Elastic","CD","₹40–55 LPA",40,55,5,"W","Remote / Bengaluru","https://elastic.co/about/careers","Remote-first. Elasticsearch makers. Great for distributed systems devs.","LV"],
+["Samsara","CD","₹40–60 LPA",40,60,4,"H","Bengaluru","https://samsara.com/company/careers","IoT/fleet SaaS. India engineering hub growing fast.","BL"],
+["Commvault","CD","₹40–63 LPA",40,63,4,"H","Pune / Bengaluru","https://careers.commvault.com","Blind Pune top paymaster. Levels.fyi up to ₹6.1M.","BL"],
+["Dremio","CD","₹40–55 LPA",40,55,4,"W","Remote / Bengaluru","https://dremio.com/careers","Data lake SQL engine. Small India team, high pay per headcount.","BL"],
+["Yugabyte","CD","₹50–70 LPA",50,70,4,"H","Bengaluru","https://yugabyte.com/company/careers","India HQ. Distributed SQL database. Open-source core team.","BL"],
+["Prophecy.io","CD","₹70–100 LPA",70,100,4,"H","Bengaluru","https://prophecy.io/careers","Grapevine: 5 YOE at ₹1 Cr+. Low-profile data engineering platform.","GV"],
+["Clumio","CD","₹40–55 LPA",40,55,4,"H","Bengaluru","https://clumio.com/company/careers","Blind: TC 40L at 3 YOE for SDE2 confirmed.","BL"],
+["MongoDB","CD","₹45–70 LPA",45,70,4,"H","Bengaluru","https://mongodb.com/company/careers","Database platform leader. India R&D center. Well-paying.","LV"],
+["Algolia","CD","₹40–60 LPA",40,60,4,"H","Bengaluru / Remote","https://algolia.com/careers","Search-as-a-service. India engineering team.","BL"],
+["Amplitude","CD","₹40–60 LPA",40,60,4,"H","Bengaluru","https://amplitude.com/careers","Product analytics. India engineering team.","LV"],
+["Mixpanel","FG","₹42–70 LPA",42,70,4,"W","Global Remote","https://mixpanel.com/jobs/","Product-analytics (a16z/Sequoia). Remote; verify India per-role. Data infra.","LV"],
+["RudderStack","CD","₹40–60 LPA",40,60,4,"H","Bengaluru","https://rudderstack.com/careers","Customer data platform. India-founded unicorn.","BL"],
+["SingleStore","CD","₹40–60 LPA",40,60,4,"H","Bengaluru","https://singlestore.com/company/careers","Distributed SQL database. India engineering team.","LV"],
+["Collibra","CD","₹40–55 LPA",40,55,4,"H","Bengaluru","https://collibra.com/careers","Data governance unicorn. India office.","GD"],
+["Alation","CD","₹40–55 LPA",40,55,4,"H","Bengaluru","https://alation.com/careers","Data catalog platform. India office.","GD"],
+["Splunk (Cisco)","CD","₹35–60 LPA",35,60,4,"H","Hyderabad / Bengaluru","https://www.splunk.com/en_us/careers.html","Observability + SIEM leader (Cisco). Data-platform eng at scale, strong comp.","LV"],
+["New Relic","CD","₹32–55 LPA",32,55,4,"H","Bengaluru / Hyderabad","https://newrelic.com/about/careers","Observability platform. Telemetry eng, India R&D centre.","GD"],
+["Dynatrace","CD","₹40–60 LPA",40,60,4,"H","Bengaluru","https://careers.dynatrace.com","APM/observability leader. India engineering hub.","GD"],
+["HashiCorp (IBM)","CD","₹40–60 LPA",40,60,4,"H","Bengaluru","https://hashicorp.com/jobs","Infrastructure automation. India engineers. Good WLB.","BL"],
+["DigitalOcean","CD","₹40–55 LPA",40,55,4,"H","Bengaluru / Remote","https://digitalocean.com/careers","Cloud provider for developers. India office.","GD"],
+["GitLab","CD","₹80–120 LPA",80,120,5,"W","Remote India","https://about.gitlab.com/jobs","Fully remote. Transparent bands — mid-level SWE earns ₹80–120 LPA total. World-class WLB.","LV"],
+["Grafana Labs","CD","₹70–100 LPA",70,100,5,"W","Remote India","https://grafana.com/about/careers","Remote-first observability. India engineers paid at global rates.","LV"],
+["Vercel","FG","₹45–80 LPA",45,80,4,"W","Global Remote","https://vercel.com/careers","Next.js creators, frontend-cloud. Remote globally. Verify India per-role. Strong eng + equity.","LV"],
+["ClickHouse","CD","₹60–100 LPA",60,100,5,"W","Remote India","https://clickhouse.com/company/careers","Remote-first OLAP database. India engineers paid at US band.","LV"],
+["Temporal","CD","₹60–90 LPA",60,90,5,"W","Remote India","https://temporal.io/careers","Workflow orchestration. Remote-friendly, well-funded. High pay.","BL"],
+["Cockroach Labs","CD","₹55–90 LPA",55,90,5,"W","Remote India","https://cockroachlabs.com/careers","Distributed SQL pioneer. Remote-friendly.","LV"],
+["dbt Labs","CD","₹55–85 LPA",55,85,5,"W","Remote India","https://getdbt.com/jobs","Remote-first data transformation platform.","LV"],
+["Fivetran","CD","₹55–80 LPA",55,80,5,"W","Remote India","https://fivetran.com/careers","ELT platform. Remote-first. Strong pay.","LV"],
+["Supabase","FG","₹45–75 LPA",45,75,5,"W","Global Remote","https://supabase.com/careers","Open-source Firebase alt. Fully remote, hires India. Postgres infra, strong eng culture.","GD"],
+["Starburst","CD","₹50–80 LPA",50,80,5,"W","Remote India","https://starburst.io/careers","Remote-first data lakehouse query engine.","LV"],
+["AppDynamics (Cisco)","ES","₹50–60 LPA",50,60,4,"H","Bengaluru","https://appdynamics.com/careers","LC Mar 2025: SDE2 base 30L + 3L bonus + 85k USD RSU = ₹58 LPA yr1.","LC"],
+["Salesforce","ES","₹40–60 LPA",40,60,4,"H","Bengaluru / Hyderabad","https://careers.salesforce.com","130+ India openings. Grapevine Tier 2 (60L+). SMTS starts at 40L base.","LC"],
+["ServiceNow","ES","₹50–70 LPA",50,70,5,"H","Hyderabad / Bengaluru","https://careers.servicenow.com","Blind: 'hidden gem' — 9-5 culture, 30-day WFA, 50+ LPA, no after-hours pressure.","BL"],
+["Sprinklr","ES","₹40–55 LPA",40,55,3,"H","Bengaluru / Gurgaon","https://sprinklr.com/careers","Blind confirmed 3 YOE at 48 LPA. IIT freshers 30L base.","BL"],
+["DevRev","ES","₹55–80 LPA",55,80,3,"H","Bengaluru","https://devrev.ai/careers","India-founded. Blind confirms competitive packages.","BL"],
+["Postman","ES","₹40–60 LPA",40,60,4,"H","Bengaluru","https://postman.com/company/careers","API platform unicorn. Bengaluru HQ.","BL"],
+["Chargebee","ES","₹40–55 LPA",40,55,4,"H","Chennai / Bengaluru","https://chargebee.com/careers","Subscription billing SaaS unicorn.","BL"],
+["Freshworks","ES","₹40–55 LPA",40,55,4,"H","Chennai / Bengaluru","https://careers.freshworks.com","Nasdaq listed. 40 LPA at Staff/Senior SDE level.","GD"],
+["Atlan","CD","₹35–60 LPA",35,60,4,"W","Remote / Bengaluru","https://atlan.com/careers/","(Insight-backed) Data-catalog/governance unicorn. Remote-first, strong comp, modern data stack.","GD"],
+["Autodesk","ES","₹45–65 LPA",45,65,5,"H","Bengaluru / Pune","https://autodesk.com/careers","Blind 2026 India top-rated. Great WLB.","BL"],
+["Eightfold.ai","ES","₹38–65 LPA",38,65,4,"H","Bengaluru","https://eightfold.ai/careers","AI-HR platform unicorn. Levels.fyi median ₹5.12M.","LV"],
+["Procore","ES","₹40–60 LPA",40,60,4,"H","Bengaluru","https://careers.procore.com","Construction-tech unicorn. India eng hub. Underrated gem.","BL"],
+["Veeva Systems","ES","₹40–60 LPA",40,60,5,"H","Bengaluru / Pune","https://veeva.com/careers","Life sciences SaaS. Very stable. Excellent WLB. Niche vertical.","BL"],
+["ThoughtSpot","ES","₹45–60 LPA",45,60,4,"H","Bengaluru","https://thoughtspot.com/careers","India-founded BI unicorn. Multiple Blind threads confirm 45+ LPA.","BL"],
+["MathWorks","ES","₹40–60 LPA",40,60,5,"H","Hyderabad / Bengaluru","https://mathworks.com/company/jobs","MATLAB/Simulink. Private, very stable. Quietly pays very well.","BL"],
+["Motive","ES","₹40–60 LPA",40,60,4,"W","Remote India","https://gomotive.com/careers","Fleet & IoT SaaS. Remote-first. Pays US-equivalent rates.","BL"],
+["Hasura","ES","₹40–60 LPA",40,60,5,"W","Bengaluru (remote)","https://hasura.io/careers","India-founded. Remote-first. Strong open-source eng culture.","BL"],
+["Dialpad","ES","₹40–60 LPA",40,60,4,"H","Bengaluru","https://dialpad.com/careers","AI-communication SaaS. Series D unicorn.","BL"],
+["Apollo GraphQL","ES","₹70–100 LPA",70,100,5,"W","Remote India","https://apollographql.com/careers","Grapevine: 5 YOE at ₹1 Cr+. GraphQL API platform.","GV"],
+["Codenation / Trilogy","ES","₹40–70 LPA",40,70,5,"W","Remote India","https://trilogy.com/careers","Repeatedly cited on Blind as high-paying. Referral-driven hiring.","BL"],
+["HubSpot","ES","₹40–65 LPA",40,65,4,"H","Bengaluru","https://hubspot.com/careers","CRM/marketing platform. India engineering hub growing fast.","LV"],
+["Twilio","FG","₹40–70 LPA",40,70,3,"H","Remote / Bengaluru","https://www.twilio.com/en-us/company/jobs","Comms API (SMS/voice). Has India org, remote-friendly. ₹40-70L for 3-YOE. Strong infra eng.","LV"],
+["Clari","ES","₹40–60 LPA",40,60,4,"H","Bengaluru","https://clari.com/about/careers","Revenue platform. Underrated hidden gem; pays >40 LPA.","BL"],
+["Figma","ES","₹55–90 LPA",55,90,4,"H","Bengaluru / Remote","https://figma.com/careers","Design platform. India engineering team. Very high comp.","LV"],
+["Miro","ES","₹45–70 LPA",45,70,4,"W","Remote India","https://miro.com/careers","Online whiteboard. Remote-friendly. Strong pay globally.","BL"],
+["Zoom","ES","₹40–60 LPA",40,60,4,"H","Bengaluru","https://careers.zoom.us","Video platform. India R&D. Solid SDE-2 comp.","GD"],
+["Braze","ES","₹40–60 LPA",40,60,4,"H","Bengaluru","https://braze.com/company/careers","Customer engagement. India engineering team.","GD"],
+["Qualtrics","ES","₹35–55 LPA",35,55,4,"H","Hyderabad","https://qualtrics.com/careers","Experience management. India engineering hub.","GD"],
+["RingCentral","ES","₹35–55 LPA",35,55,4,"H","Hyderabad / Bengaluru","https://ringcentral.com/careers","UCaaS platform. Large India R&D center.","GD"],
+["Talkdesk","ES","₹35–55 LPA",35,55,4,"H","Bengaluru","https://talkdesk.com/careers","Contact center AI. India engineering hub.","GD"],
+["Bloomreach","ES","₹40–60 LPA",40,60,4,"H","Bengaluru","https://bloomreach.com/careers","Commerce experience cloud. India R&D center.","GD"],
+["Shopify","ES","₹50–80 LPA",50,80,5,"W","Remote India","https://shopify.com/careers","Remote-first e-com platform. Hires SWEs globally including India.","LV"],
+["Zapier","ES","₹70–100 LPA",70,100,5,"W","Remote India","https://zapier.com/jobs","Fully remote. Transparent pay bands start $100k+ globally. Very high comp.","LV"],
+["Canonical","ES","₹40–70 LPA",40,70,5,"W","Remote India","https://canonical.com/careers","Ubuntu Linux company. Fully distributed. Clear pay bands.","LV"],
+["Automattic","RF","₹40–75 LPA",40,75,5,"W","Global Remote","https://automattic.com/work-with-us/","WordPress, WooCommerce, Tumblr. 1,800+ people across 90+ countries — confirmed India hires. Home-office setup allowance, open vacation policy, equity, health coverage.","GD"],
+["Buffer","RF","₹40–60 LPA",40,60,5,"W","Global Remote","https://buffer.com/journey","Social media mgmt tool. Radical salary transparency — all salaries public online. Fully paid sabbaticals, home-office stipend, family support fund, 15+ countries.","GD"],
+["Gupshup","ES","₹28–48 LPA",28,48,3,"H","Bengaluru","https://www.gupshup.io/developer/careers","Conversational-messaging SaaS unicorn. Messaging infra at massive scale.","GD"],
+["CleverTap","ES","₹28–48 LPA",28,48,3,"H","Mumbai / Bengaluru","https://clevertap.com/careers/","Mobile marketing + analytics SaaS. Real-time engagement at scale. Strong eng, good comp.","GD"],
+["MoEngage","ES","₹28–48 LPA",28,48,3,"H","Bengaluru","https://www.moengage.com/careers/","Customer-engagement SaaS, global clients. ML personalization, real-time data pipelines.","GD"],
+["WebEngage","ES","₹25–42 LPA",25,42,3,"H","Mumbai","https://webengage.com/careers/","Retention-marketing SaaS. Real-time engagement, journey orchestration.","GD"],
+["LeadSquared","ES","₹25–42 LPA",25,42,3,"H","Bengaluru","https://www.leadsquared.com/careers/","Sales-CRM SaaS unicorn. Marketing automation, workflow engines.","GD"],
+["Appsmith","ES","₹35–55 LPA",35,55,4,"H","Bengaluru","https://appsmith.com/careers","Low-code internal tools. India-founded, well-funded Series B.","BL"],
+["Kissflow","ES","₹30–50 LPA",30,50,4,"H","Chennai / Bengaluru","https://kissflow.com/careers","No-code/low-code SaaS. India-founded.","GD"],
+["Plivo","ES","₹35–55 LPA",35,55,4,"H","Bengaluru","https://plivo.com/careers","Communications platform API. India-founded.","GD"],
+["Observe.AI","ES","₹40–60 LPA",40,60,4,"H","Bengaluru","https://observe.ai/about/careers","Contact center AI. Bengaluru hub. Pays >40 LPA for SDE-2.","BL"],
+["Whatfix","ES","₹28–50 LPA",28,50,3,"H","Bengaluru","https://whatfix.com/careers/","Digital-adoption SaaS unicorn. Browser extension infra, analytics. Strong comp.","GD"],
+["Yellow.ai","ES","₹28–48 LPA",28,48,3,"H","Bengaluru","https://yellow.ai/careers/","Conversational-AI SaaS. NLP/LLM-powered bots, global enterprise clients.","GD"],
+["Darwinbox","ES","₹28–48 LPA",28,48,3,"H","Hyderabad","https://darwinbox.com/careers","HR-tech SaaS unicorn, APAC leader. Platform engineering, workflow systems.","GD"],
+["HighRadius","BF","₹30–50 LPA",30,50,3,"O","Hyderabad / Mumbai","https://highradius.com/about/careers","Fintech AI unicorn. Large India engineering team.","GD"],
+["HackerRank","ES","₹35–50 LPA",35,50,4,"H","Bengaluru","https://hackerrank.com/careers","Developer skills platform. Bengaluru office.","GD"],
+["Fractal Analytics","CD","₹25–45 LPA",25,45,3,"H","Mumbai / Bengaluru","https://fractal.ai/careers/","AI-analytics unicorn, Fortune-500 clients. ML/AI consulting + products. Large DS teams.","GD"],
+["Uniphore","ES","₹30–52 LPA",30,52,3,"H","Chennai / Remote","https://www.uniphore.com/careers/","Conversational-AI unicorn. Speech/NLP ML, enterprise contact-center AI.","GD"],
+["Zamp","SR","₹40–55 LPA",40,55,5,"W","Remote India","https://zamp.finance/careers","LC Mar 2025: base 40L + 52L ESOPs for 4 yrs. Finance infra startup.","LC"],
+["SenseHQ","SR","₹40–55 LPA",40,55,5,"W","Remote India","https://sensehq.com/careers","LC Feb 2025: base 38L + 2L signing + 3.8L bonus + 45L ESOPs = 43.8L yr1.","LC"],
+["Omio","SR","₹42–50 LPA",42,50,4,"W","Remote India","https://omio.com/careers","LC Feb 2025: base 42L + 3L signing + 20L ESOPs = 45L yr1. Berlin-based.","LC"],
+["SentinelOne","CY","₹40–65 LPA",40,65,4,"H","Bengaluru","https://sentinelone.com/jobs","EDR/XDR cybersecurity leader. India office. Competes with CrowdStrike on pay.","LV"],
+["Zscaler","CY","₹40–65 LPA",40,65,4,"H","Bengaluru","https://zscaler.com/company/careers","Cloud security unicorn. >40 LPA for SDE-2 at 3 YOE.","LV"],
+["Palo Alto Networks","CY","₹40–60 LPA",40,60,4,"H","Bengaluru","https://jobs.paloaltonetworks.com","Levels.fyi India comp ₹3.44M–₹14M. Security SWEs hit 40+ at mid-level.","LV"],
+["CrowdStrike","CY","₹35–62 LPA",35,62,4,"W","Remote / Pune","https://www.crowdstrike.com/careers/","Endpoint-security leader. Remote-first, India team growing. Cloud-security eng, strong comp.","LV"],
+["Fortinet","CY","₹28–48 LPA",28,48,4,"H","Bengaluru","https://www.fortinet.com/corporate/careers","Network-security giant. Firewall/SASE eng, India R&D centre.","GD"],
+["Snyk","CY","₹40–60 LPA",40,60,4,"H","Bengaluru","https://snyk.io/jobs","Developer security platform. India engineers.","BL"],
+["Securiti","CY","₹40–60 LPA",40,60,4,"H","Bengaluru","https://securiti.ai/careers","Data security unicorn. Large India engineering team.","BL"],
+["OneTrust","CY","₹35–55 LPA",35,55,4,"H","Bengaluru / Hyderabad","https://onetrust.com/careers","Privacy & trust platform. India engineering hub.","GD"],
+["CyberArk","CY","₹35–55 LPA",35,55,4,"H","Hyderabad / Bengaluru","https://cyberark.com/careers","Privileged access security. India R&D in Hyderabad.","GD"],
+["SailPoint","CY","₹35–55 LPA",35,55,4,"H","Bengaluru","https://sailpoint.com/careers","Identity governance. India engineering team.","GD"],
+["Okta","CY","₹40–60 LPA",40,60,4,"H","Bengaluru","https://okta.com/company/careers","IAM market leader. India engineering center.","LV"],
+["Graviton Research Capital","HQ","₹50–100 LPA",50,100,3,"O","Gurugram","https://www.gravitontrading.com/careers.html","Elite India prop-trading firm. Among India's highest fresher pay (₹50L+); 3-YOE well above. C++ low-latency, very selective.","BL"],
+["AlphaGrep Securities","HQ","₹60–103 LPA",60,103,2,"O","Bengaluru / Mumbai","https://alpha-grep.com/careers","CTC doc confirmed: fixed base ₹40L + ₹15L min guaranteed bonus yr1.","BL"],
+["Tower Research Capital","HQ","₹60–100 LPA",60,100,2,"O","Gurgaon","https://tower-research.com/open-positions","IITs primary hiring source. Two Horizon Centre Gurgaon.","BL"],
+["Citadel / Citadel Securities","HQ","₹80–150 LPA",80,150,2,"O","Gurgaon / Mumbai","https://citadel.com/careers","Blind 2026 top median TC globally. India team growing fast.","BL"],
+["IMC Trading","HQ","₹60–90 LPA",60,90,2,"O","Mumbai","https://imc.com/in/careers","Targeting 150 India employees. FAANG-beating pay.","BL"],
+["Optiver","HQ","₹60–90 LPA",60,90,2,"O","Mumbai","https://optiver.com/working-at-optiver/career-opportunities","Mumbai office opened 2024. IIT recruitment focus.","BL"],
+["Jump Trading","HQ","₹60–100 LPA",60,100,2,"O","Gurgaon / Mumbai","https://jumptrading.com/apply","World-class pay. Very selective hiring.","BL"],
+["WorldQuant","HQ","₹50–80 LPA",50,80,3,"H","Mumbai","https://worldquant.com/career-listing","AlphaThon programme for lateral entry. Research + engineering.","BL"],
+["iRage Capital","HQ","₹40–70 LPA",40,70,2,"O","Mumbai","https://irage.co/careers","India-based HFT. Algo-heavy engineering.","BL"],
+["SIG (Susquehanna)","HQ","₹60–100 LPA",60,100,2,"O","Hyderabad","https://sig.com/careers","Global HFT. Hyderabad office. IIT-heavy campus + lateral.","BL"],
+["NK Securities","HQ","₹50–80 LPA",50,80,2,"O","Delhi / Gurgaon","https://nksecurities.com/careers","India-based prop trading. Rarely discussed, very high pay.","BL"],
+["Millennium Management","HQ","₹70–120 LPA",70,120,2,"O","Mumbai","https://mlp.com/careers","Multi-strategy hedge fund. Mumbai tech office. Top-tier comp.","BL"],
+["Nvidia","SC","₹50–80 LPA",50,80,4,"H","Bengaluru / Pune","https://nvidia.com/en-in/about-nvidia/careers","₹60L–₹1Cr+ senior roles. CUDA/AI expertise commands premium.","LV"],
+["Qualcomm","SC","₹40–65 LPA",40,65,4,"H","Hyderabad / Bengaluru","https://qualcomm.com/company/careers","5G + AI chips. One of India's largest semiconductor R&D centers.","BL"],
+["Intel","SC","₹40–75 LPA",40,75,4,"H","Bengaluru / Hyderabad","https://jobs.intel.com","Chip design + IoT + AI. ₹40–75 LPA senior-level.","BL"],
+["AMD","SC","₹45–65 LPA",45,65,4,"H","Hyderabad / Bengaluru","https://amd.com/en/corporate/careers","Blind 2025 high trust in mgmt. Growing post-Xilinx merger.","BL"],
+["Arm (India)","SC","₹45–70 LPA",45,70,4,"H","Bengaluru","https://careers.arm.com","Chip IP. Strong for embedded/firmware engineers.","LV"],
+["Synopsys","SC","₹40–60 LPA",40,60,4,"H","Bengaluru / Hyderabad","https://careers.synopsys.com","EDA tools. Steady growth. India eng center.","GD"],
+["Cadence Design Systems","SC","₹40–60 LPA",40,60,4,"H","Bengaluru / Pune","https://cadence.com/careers","EDA tools. Good WLB. Consistent comp.","GD"],
+["Marvell Technology","SC","₹40–65 LPA",40,65,4,"H","Bengaluru","https://marvell.com/company/careers.html","Networking/storage semiconductors.","LV"],
+["Micron Technology","SC","₹40–60 LPA",40,60,4,"H","Hyderabad / Bengaluru","https://micron.com/about/careers","Memory/storage. India R&D expanding.","GD"],
+["Texas Instruments","SC","₹40–60 LPA",40,60,3,"O","Bengaluru / Hyderabad","https://ti.com/careers","Embedded/analog IC. Strict WFO. Very stable long-term.","GD"],
+["SiFive","SC","₹45–70 LPA",45,70,4,"H","Bengaluru","https://sifive.com/company/careers","RISC-V chip design pioneer. India R&D. High pay.","BL"],
+["Tenstorrent","SC","₹45–70 LPA",45,70,4,"H","Bengaluru","https://tenstorrent.com/careers","AI chip startup (Jim Keller). India engineering team.","BL"],
+["Target India","GR","₹40–60 LPA",40,60,5,"H","Bengaluru","https://indiajobs.target.com","Blind #1 rated India company 2025 and 2026. Best culture + WLB in GCC category.","BL"],
+["Lowe's India","GR","₹28–50 LPA",28,50,4,"H","Bengaluru","https://www.lowes.co.in/","US home-improvement retail GCC. e-commerce, data, platform engineering at scale.","LV"],
+["Walmart Global Tech","GR","₹40–70 LPA",40,70,4,"H","Bengaluru / Chennai","https://careers.walmart.com","₹40–70 LPA senior-level. Grapevine Tier 3 (50L+).","GV"],
+["American Express","GR","₹40–60 LPA",40,60,5,"H","Gurgaon / Bengaluru","https://aexp.com/us/en/career","Blind 2025 India top-rated. Best WLB in GCC category.","BL"],
+["Coupang","GR","₹45–70 LPA",45,70,3,"H","Bengaluru","https://coupang.com/vp/pages/careers","South Korean e-commerce giant. Growing India eng team.","LV"],
+["Akamai Technologies","GN","₹45–65 LPA",45,65,5,"H","Bengaluru","https://akamai.com/careers","Blind 2025 and 2026 India top-rated. Culture + comp both excellent.","BL"],
+["Arista Networks","GN","₹40–60 LPA",40,60,4,"H","Bengaluru","https://arista.com/careers","Blind 2025 India top culture. WLB also strong.","BL"],
+["Pure Storage","GN","₹50–70 LPA",50,70,4,"H","Bengaluru","https://purestorage.com/company/careers.html","Blind 2025 India top-rated. All-flash storage.","BL"],
+["EPAM Systems","GN","₹40–60 LPA",40,60,4,"H","Hyderabad / Bengaluru","https://epam.com/careers","Blind 2025 India top-rated. Genuine product eng — not IT services.","BL"],
+["Agoda","FG","₹35–60 LPA",35,60,3,"H","Bengaluru / Bangkok","https://careers.agoda.com/","Booking Holdings' Asia arm — new Bengaluru tech centre. Strong pay, travel-scale systems, data + ML.","LV"],
+["GoDaddy","GN","₹40–55 LPA",40,55,4,"H","Gurgaon","https://careers.godaddy.com","Blind NCR 40+ LPA list. Large Gurgaon engineering office.","BL"],
+["Booking.com","GN","₹40–55 LPA",40,55,4,"H","Bengaluru / Gurgaon","https://booking.com/content/careers.en-gb.html","Travel tech GCC. India engineering teams growing.","GD"],
+["Oracle (OCI)","GN","₹40–60 LPA",40,60,4,"H","Bengaluru / Hyderabad","https://oracle.com/careers","OCI cloud roles best-paying. Grapevine Tier 2 (60L+).","GV"],
+["Tekion Corp","GN","₹40–62 LPA",40,62,3,"H","Bengaluru","https://tekion.com/careers","Automotive SaaS. Levels.fyi up to ₹6.25M Staff SE.","LV"],
+["Intuit","GN","₹40–60 LPA",40,60,4,"H","Bengaluru","https://intuit.com/careers","TurboTax/QuickBooks maker. Grapevine Tier 2 (60L+).","GV"],
+["Adobe","GN","₹40–70 LPA",40,70,4,"H","Bengaluru / Noida","https://adobe.com/careers.html","₹40–70 LPA senior-level. Grapevine Tier 2. Strong RSU.","GV"],
+["NetApp","GN","₹35–55 LPA",35,55,4,"H","Bengaluru / Pune","https://netapp.com/company/careers","Storage and cloud data management. India R&D center.","GD"],
+["Juniper Networks","GN","₹35–55 LPA",35,55,4,"H","Bengaluru","https://juniper.net/us/en/company/careers.html","Networking hardware/software. India engineering center.","GD"],
+["Atlassian","ES","₹40–100 LPA",40,100,4,"H","Bengaluru","https://www.atlassian.com/company/careers","Levels.fyi: median ₹90L in India (P40→P60). P40 band ₹67L, P50 band ₹97L. Collaboration tools giant. Strong WLB culture.","LV"],
+["Rippling","ES","₹45–95 LPA",45,95,3,"H","Bengaluru","https://www.rippling.com/careers","Levels.fyi: median ₹95L in India (L5→L8). HR + IT platform. Pays FAANG-adjacent. Blind confirms strong India comp.","LV"],
+["Stripe","BF","₹50–80 LPA",50,80,4,"H","Bengaluru / Remote","https://stripe.com/jobs","Payments infra. India engineering team. Global pay bands. Strong for backend/distributed systems roles.","LV"],
+["PayPal","BF","₹30–50 LPA",30,50,3,"H","Chennai / Bengaluru","https://careers.pypl.com","Levels.fyi: ₹3.18M–₹17M (CL5–CL9), median ₹47L. Blind SDE3 India: 30–40L base. Chennai is primary India hub.","LV"],
+["JP Morgan Chase","BF","₹35–50 LPA",35,50,3,"H","Bengaluru / Hyderabad / Mumbai","https://careers.jpmorgan.com","Quora lateral: base ₹30L + variable ₹6L + equity ₹10L = ~₹46 LPA for 3 YOE. 500+ India openings. Quant/cloud teams pay highest.","BL"],
+["Barclays","BF","₹35–50 LPA",35,50,3,"H","Pune / Chennai","https://search.jobs.barclays","Large Pune tech center. Senior SDE pay 35–50 LPA. Strong for Java/Python banking engineers.","GD"],
+["Citi","BF","₹35–50 LPA",35,50,3,"H","Bengaluru / Pune","https://jobs.citi.com","Large India GCC. Pune and Bengaluru offices. 35–50 LPA for SDE2 at 3 YOE.","GD"],
+["Wells Fargo","BF","₹35–50 LPA",35,50,3,"H","Hyderabad / Bengaluru / Chennai","https://wellsfargojobs.com","Large India tech center in Hyderabad. Competitive pay for fintech platform roles.","GD"],
+["UBS","BF","₹35–50 LPA",35,50,3,"H","Pune / Hyderabad","https://jobs.ubs.com","Investment bank. India GCC in Pune and Hyderabad. Good pay for fintech SWEs.","GD"],
+["Nomura","BF","₹35–50 LPA",35,50,3,"O","Mumbai / Bengaluru","https://nomuracareers.com","Japanese investment bank. Mumbai + Bengaluru. High pay for trading systems / quant tech roles.","GD"],
+["BNP Paribas","BF","₹35–50 LPA",35,50,3,"H","Mumbai / Bengaluru","https://bnpparibas.com/en/careers","French bank GCC. Large India engineering team. Good pay for 3 YOE fintech engineers.","GD"],
+["Societe Generale","BF","₹35–50 LPA",35,50,3,"H","Bengaluru","https://careers.societegenerale.com","French bank. Large Bengaluru GCC. 35–50 LPA for experienced SWEs.","GD"],
+["Standard Chartered","BF","₹30–45 LPA",30,45,4,"H","Bengaluru / Chennai","https://scb.taleo.net","Large India tech center. Good pay and WLB. 30–45 LPA for SDE2.","GD"],
+["Fidelity Investments","BF","₹40–60 LPA",40,60,4,"H","Chennai / Bengaluru","https://jobs.fidelity.com","Wealth management GCC. Large Chennai center. Pays well — 40–60 LPA for experienced SWEs.","GD"],
+["Mastercard","BF","₹40–60 LPA",40,60,4,"H","Pune / Bengaluru","https://careers.mastercard.com","Payments network. Large India GCC in Pune. Pays 40–60 LPA for senior SWE. Good WLB.","GD"],
+["Visa","BF","₹40–60 LPA",40,60,4,"H","Bengaluru","https://careers.visa.com","Payments network. Bengaluru tech center. Grapevine Tier 3 (50L+). Good pay and culture.","GV"],
+["Cisco","GN","₹30–45 LPA",30,45,4,"H","Bengaluru / Pune","https://jobs.cisco.com","Levels.fyi: SWE III India median ₹34.7L. Networking giant. Bengaluru and Pune R&D. Includes AppDynamics.","LV"],
+["SAP","ES","₹35–55 LPA",35,55,4,"H","Bengaluru / Hyderabad","https://jobs.sap.com","Enterprise software giant. Large India R&D. Solid pay for 3 YOE in cloud/platform roles.","GD"],
+["Workday","ES","₹40–65 LPA",40,65,4,"H","Hyderabad / Bengaluru","https://workday.com/en-us/company/careers.html","HR/finance cloud SaaS. Large Hyderabad tech center. Pays 40–65 LPA. Good WLB.","GD"],
+["Expedia","GN","₹40–55 LPA",40,55,4,"H","Gurgaon","https://expedia.com/careers","Blind confirmed: 40L base for 3.5 YOE. Large Gurgaon office. Travel tech platform engineering.","BL"],
+["MakeMyTrip","IU","₹25–45 LPA",25,45,3,"H","Gurugram / Bengaluru","https://careers.makemytrip.com/","India's biggest OTA (listed). Search, pricing ML, booking infra at scale.","GD"],
+["Ola","IU","₹35–55 LPA",35,55,3,"H","Bengaluru","https://ola.money/careers","Ride-hailing + EV unicorn. Bengaluru HQ. 35–55 LPA for senior SDE roles.","BL"],
+["Paytm","IU","₹30–45 LPA",30,45,2,"O","Noida / Bengaluru","https://paytm.com/careers","India fintech pioneer. Listed company. 30–45 LPA for SDE2. Strict WFO. Known for high workload.","GD"],
+["PolicyBazaar","IU","₹35–50 LPA",35,50,3,"H","Gurgaon","https://policybazaar.com/info/careers","Insurance + financial products platform. PB Fintech listed. Gurgaon HQ. 35–50 LPA SDE2.","GD"],
+["Myntra","IU","₹40–60 LPA",40,60,3,"H","Bengaluru","https://myntra.com/careers","Fashion e-commerce (Walmart/Flipkart group). Bengaluru. 40–60 LPA for SDE2. Good for frontend/ML roles.","GD"],
+["Red Hat (IBM)","ES","₹35–55 LPA",35,55,4,"H","Pune / Bengaluru","https://redhat.com/en/jobs","Open-source leader (IBM). Pune and Bengaluru R&D. 35–55 LPA for senior platform/OpenShift roles.","GD"],
+["ThoughtWorks","ES","₹35–55 LPA",35,55,4,"H","Bengaluru / Hyderabad / Pune / Chennai","https://thoughtworks.com/careers","Tech consulting + product engineering. Strong India culture. 35–55 LPA for senior consultants.","GD"],
+["Publicis Sapient","ES","₹35–50 LPA",35,50,3,"H","Bengaluru / Gurgaon","https://publicissapient.com/careers","Digital transformation. India engineering hub. 35–50 LPA for senior SWEs.","GD"],
+["Persistent Systems","ES","₹35–55 LPA",35,55,4,"H","Pune / Bengaluru / Nagpur","https://persistent.com/careers","Product engineering services. Pune HQ. Pays well at senior level — 35–55 LPA. Unique India-born listed MNC.","GD"],
+["Samsung R&D India","SC","₹35–55 LPA",35,55,3,"O","Bengaluru / Noida","https://samsungcareers.com","Samsung's India R&D arm. Bengaluru + Noida. 35–55 LPA for SDE2. Strict WFO. Large team.","GD"],
+["Bosch Global Software","SC","₹30–45 LPA",30,45,4,"H","Bengaluru","https://bosch.com/careers","Engineering software for automotive + IoT. Large Bengaluru campus. 30–45 LPA for senior SWEs.","GD"],
+["Siemens (India)","GN","₹30–40 LPA",30,40,4,"H","Bengaluru / Pune","https://new.siemens.com/global/en/company/jobs.html","Industrial software and IoT. India R&D center. 30–40 LPA for embedded/platform SWEs.","GD"],
+["Nykaa","IU","₹30–45 LPA",30,45,3,"H","Mumbai / Bengaluru","https://careers.nykaa.com","Fashion + beauty e-commerce. Listed Indian company. 30–45 LPA for SDE2.","GD"],
+["BookMyShow","IU","₹30–45 LPA",30,45,4,"H","Mumbai","https://bookmyshow.com/info/careers","Ticketing + live entertainment platform. Mumbai HQ. 30–45 LPA for SDE2. Good WLB.","GD"],
+["Headout","IU","₹25–40 LPA",25,40,4,"H","Bengaluru","https://headout.com/careers","Levels.fyi: SE median ₹36.5L, max ₹74.7L. Grapevine: ₹3L–₹72L range. 3 YOE engineers typically at ₹25–40L depending on level. Travel experiences platform, strong culture.","LV"],
+["Deel","ES","₹50–90 LPA",50,90,5,"W","Remote India","https://deel.com/careers","Global HR/payroll platform. Remote-first. India engineers paid at global rates — strong pay for backend/infra. WFH-first culture.","BL"],
+["Innovaccer","HT","₹30–50 LPA",30,50,4,"H","Noida / Bengaluru","https://innovaccer.com/company/careers","Healthcare AI unicorn. India R&D hub. Fishbowl: SDE2 25 LPA in 2023; appraisals 10–30%; senior SDE crosses 35–40 LPA.","BL"],
+["Spinny","IU","₹30–50 LPA",30,50,3,"H","Gurgaon / Bengaluru","https://spinny.com/careers","Used car e-commerce unicorn. Gurgaon HQ. 30–50 LPA for SDE2 at 3 YOE. Good engineering culture.","GD"],
+["Cars24","IU","₹30–48 LPA",30,48,3,"H","Gurgaon","https://cars24.com/careers","Auto-tech unicorn. Levels.fyi: SE max ₹48.5L. SDE2 3 YOE = 30–40 LPA. Gurgaon HQ.","LV"],
+["Ather Energy","IU","₹30–50 LPA",30,50,4,"H","Bengaluru","https://atherenergy.com/careers","Electric scooter unicorn. India-founded. 30–50 LPA for embedded + software SWEs at 3 YOE. Strong engineering culture.","GD"],
+["LTIMindtree","ES","₹35–55 LPA",35,55,3,"H","Pune / Bengaluru / Hyderabad","https://ltimindtree.com/careers","Merged LT Infotech + Mindtree. Senior product engineering roles (digital, cloud, AI) pay 35–55 LPA. Strong for 3–5 YOE lateral moves.","GD"],
+["Mphasis","ES","₹30–45 LPA",30,45,3,"H","Bengaluru / Pune","https://mphasis.com/careers","IT services with strong product engineering units. Senior cloud/AI roles pay 30–45 LPA. Blackstone-backed.","GD"],
+["Remote.com","ES","₹50–80 LPA",50,80,5,"W","Remote India","https://remote.com/company/jobs","Global employment platform. Remote-first. India engineers hired at global comp bands. WFH-first.","LV"],
+["Multiplier","FG","₹35–60 LPA",35,60,4,"W","Global Remote","https://www.usemultiplier.com/careers","(Singapore) Global EOR platform. Hires India remote. Helps onboard engineers to global payrolls. Strong async culture, USD-linked.","GD"],
+["Khatabook","BF","₹30–45 LPA",30,45,3,"H","Bengaluru","https://khatabook.com/careers","SMB fintech platform. Series C. India-founded. 30–45 LPA for SDE2 at 3 YOE. Strong data/backend focus.","GD"],
+["Jar App","BF","₹35–55 LPA",35,55,4,"H","Bengaluru","https://myjar.app/careers","Micro-savings fintech unicorn. Bengaluru. Series C. 35–55 LPA for SDE2. Strong payments and ML focus.","BL"],
+["Licious","IU","₹30–45 LPA",30,45,3,"H","Bengaluru","https://licious.in/careers","D2C fresh meat unicorn. Bengaluru. Strong supply chain + platform engineering. 30–45 LPA for SDE2.","GD"],
+["Keka HR","ES","₹30–45 LPA",30,45,4,"H","Hyderabad","https://keka.com/careers","HR SaaS. India-founded. Hyderabad HQ. Series A. Good WLB and pay for SDE2 at 3 YOE.","GD"],
+["Volopay","BF","₹35–55 LPA",35,55,4,"H","Bengaluru","https://volopay.com/careers","B2B spend management fintech. Singapore-HQ, India engineering team. 35–55 LPA for SDE2.","BL"],
+["Perfios","BF","₹35–55 LPA",35,55,4,"H","Bengaluru","https://perfios.com/careers","Financial data analytics unicorn. Bengaluru HQ. 35–55 LPA for SDE2 at 3 YOE. Underrated.","GD"],
+["Open (neobank)","BF","₹35–55 LPA",35,55,4,"H","Bengaluru","https://open.money/careers","Neo-bank for SMBs. India-founded unicorn. 35–55 LPA for SDE2. Strong fintech platform engineering.","BL"],
+["Jupiter Money","BF","₹35–55 LPA",35,55,4,"H","Bengaluru / Mumbai","https://jupiter.money/careers","Neo-bank unicorn. Ex-PayPal founder. Bengaluru HQ. 35–55 LPA for SDE2 at 3 YOE.","BL"],
+["Polygon (Web3)","BF","₹40–70 LPA",40,70,4,"H","Bengaluru / Remote","https://polygon.technology/careers","India-founded blockchain platform. 40–70 LPA for blockchain + backend engineers. Remote-friendly.","BL"],
+["Ola Electric","IU","₹35–55 LPA",35,55,3,"H","Bengaluru","https://olaelectric.com/careers","EV unicorn (separate from Ola Cabs). Bengaluru. 35–55 LPA for embedded + software engineers at 3 YOE.","GD"],
+["Wingify (VWO)","ES","₹30–45 LPA",30,45,4,"H","Delhi / Gurgaon","https://wingify.com/careers","A/B testing SaaS. India-founded bootstrapped. Delhi HQ. 30–45 LPA for SDE2. Great WLB, no VC pressure.","BL"],
+["PocketFM","IU","₹35–55 LPA",35,55,3,"H","Bengaluru","https://pocketfm.com/careers","Audio entertainment platform. Unicorn. Bengaluru. 35–55 LPA for SDE2 focused on streaming + ML.","BL"],
+["Kit (ConvertKit)","RF","₹65–100 LPA",65,100,5,"W","Global Remote","https://kit.com/careers","Email/creator marketing. Bootstrapped & profitable. 52% profit sharing, 5% 401k match, $1k paid-vacation stipend, biannual company retreats, 12-wk parental leave. 108 people, 88 cities globally.","GD"],
+["Doist","RF","₹45–70 LPA",45,70,5,"W","Global Remote","https://doist.com/careers/","Todoist & Twist. ~100 people, 35+ countries. 40 days PTO, profit sharing, home-office stipend, biannual company retreats, fully async culture. No meetings culture.","GD"],
+["Basecamp (37signals)","RF","₹65–100 LPA",65,100,5,"W","Global Remote","https://37signals.com/jobs/","$100k+ minimum salary regardless of location. Profit sharing, paid sabbaticals, 32-hr work weeks in summer, $5k vacation stipend, anti-meeting philosophy.","GD"],
+["Help Scout","RF","₹40–65 LPA",40,65,5,"W","Global Remote","https://www.helpscout.com/company/careers/","Customer service SaaS. ~100 people, 80+ cities. Remote-first 12+ years. Unlimited PTO, home-office budget, strong parental leave, low-stress culture.","GD"],
+["Close.com","RF","₹45–72 LPA",45,72,5,"W","Global Remote","https://close.com/careers/","Sales CRM. Bootstrapped profitable since 2013, ~110 people async-globally. 4-week paid sabbatical every 5 years, annual international offsite, no-surveillance culture.","GD"],
+["Customer.io","RF","₹45–72 LPA",45,72,5,"W","Global Remote","https://customer.io/careers/","Marketing automation platform. ~250 people, fully remote. Unlimited PTO, home-office stipend, professional dev budget, equity, strong WLB consistently rated.","GD"],
+["Webflow","RF","₹55–85 LPA",55,85,4,"W","Global Remote","https://webflow.com/careers","No-code web builder, ~600 people, remote-first 2022. Competitive equity, wellness stipend, learning budget, flexible PTO, strong product culture.","GD"],
+["Hotjar (Contentsquare)","RF","₹50–80 LPA",50,80,5,"W","Global Remote","https://careers.contentsquare.com/","Heatmaps & session analytics — now Contentsquare. 40 days PTO, dev budget, home-office stipend, biannual retreats, 30+ countries.","GD"],
+["DuckDuckGo","RF","₹55–85 LPA",55,85,5,"W","Global Remote","https://duckduckgo.com/hiring","Privacy-first search & browser. ~180 people, remote-only, no HQ. US-equivalent pay globally, strong async culture, mission-driven, low bureaucracy.","GD"],
+["Articulate","RF","₹50–78 LPA",50,78,5,"W","Global Remote","https://articulate.com/company/careers.php","e-Learning software (Storyline 360, Rise). ~400 people, remote since founding 2002. Unlimited PTO, generous home-office budget, strong parental leave.","GD"],
+["Brex","BF","₹50–85 LPA",50,85,3,"W","Global Remote","https://brex.com/careers","(YC W17) Corporate cards & spend management. $12B valuation. US-focused but remote roles open globally. Strong equity, top-of-market US pay for remote hires. Glassdoor 4.0.","LV"],
+["Plaid","BF","₹55–85 LPA",55,85,4,"W","Global Remote","https://plaid.com/careers/","(YC S13) Financial data API powering Venmo, Robinhood, Betterment. $13B. Top engineering culture. US-primarily but some remote globally. Strong comp + equity.","LV"],
+["Mercury","BF","₹40–65 LPA",40,65,4,"W","Global Remote","https://mercury.com/about#hiring","(YC S19) Banking and financial operations for startups. $1.6B. Remote-first, excellent WLB. Strong product culture. Some India remote hiring reported.","GD"],
+["Zepto","IU","₹25–55 LPA",25,55,3,"H","Bengaluru / Mumbai","https://www.zeptonow.com/careers","(YC W21) 10-minute grocery delivery, India's fastest-growing startup. $5B. Intense pace, strong equity upside. Real distributed systems & ML challenges.","BL"],
+["Sentry","CD","₹45–70 LPA",45,70,4,"W","Global Remote","https://sentry.io/careers/","(YC W12) Error monitoring & performance tracking. $3.5B. Confirmed India remote hiring. Strong open-source culture, good comp, async-first team across 35+ countries.","GD"],
+["Weights & Biases","CD","₹50–80 LPA",50,80,4,"W","Global Remote","https://wandb.ai/site/careers","(YC W17) MLflow alternative, used by OpenAI, Toyota. Remote globally including India. Engineers own the full ML platform stack. Good equity + culture. 4.4 Glassdoor.","GD"],
+["Anyscale","CD","₹60–100 LPA",60,100,4,"W","Global Remote","https://anyscale.com/careers","(YC W19) Ray framework creators — the backbone for distributed ML at OpenAI, Uber, Shopify. $1B+. Small elite team, top-of-market pay $144k-$350k US. Some remote India.","LV"],
+["OpenAI","CD","₹90–170 LPA",90,170,3,"W","Global Remote","https://openai.com/careers/","(YC W16) World's leading AI lab. GPT-4, ChatGPT, Sora. $80B. Median US SE: $555k. Very selective but remote India hires exist for specialized roles. Exceptional equity upside.","LV"],
+["Cohere","CD","₹60–100 LPA",60,100,4,"W","Global Remote","https://cohere.com/careers","(YC W21) Enterprise AI — LLMs for Fortune 500 companies. $5B. Remote globally. Strong AI/ML engineering work, equity upside. Toronto HQ but distributed team.","GD"],
+["Retool","ES","₹50–80 LPA",50,80,3,"W","Global Remote","https://retool.com/careers","(YC W17) Internal tools builder used by DoorDash, Amazon, Brex. $3.2B. Some India remote roles. US $160k-$330k base. High bar, strong ownership culture. Glassdoor 3.4.","LV"],
+["Notion","ES","₹55–85 LPA",55,85,4,"W","Global Remote","https://www.notion.so/careers","(YC S18) All-in-one workspace. $10B, 6M+ paying teams. Some India remote engineering. New grad TC $245k US. Collaborative culture, good equity. Glassdoor 4.2.","LV"],
+["Airtable","ES","₹45–75 LPA",45,75,4,"W","Global Remote","https://airtable.com/careers","(YC S12) No-code relational database. $11B. India data on levels.fyi confirmed. Strong product culture, equity-heavy packages, US median $470k TC. Remote India possible.","LV"],
+["Linear","ES","₹55–85 LPA",55,85,5,"W","Global Remote","https://linear.app/careers","(YC W19) Premium project management (Slack, Mercury, Loom use it). ~50 people, remote-first. Extreme craft culture — among the best-designed products in SaaS. Great comp.","GD"],
+["Coda","ES","₹45–70 LPA",45,70,4,"W","Global Remote","https://coda.io/jobs","(YC S13) Docs-meets-spreadsheets-meets-apps. $3.5B. Remote-friendly. Former Google/Amazon engineers. Thoughtful async culture. Some India remote hiring reported.","GD"],
+["Vanta","CY","₹50–80 LPA",50,80,4,"W","Global Remote","https://vanta.com/careers","(YC W18) Automated SOC2/ISO27001 compliance. $4.2B — raised $150M in 2025. Fastest-growing security startup. Some remote India engineering roles. Strong equity story.","GD"],
+["Dropbox","GN","₹40–65 LPA",40,65,4,"H","Hyderabad","https://jobs.dropbox.com/","(YC S07) Cloud storage pioneer. Hyderabad India office. ~500 India employees. Teams work on core sync engine, ML, and platform. Good WLB, solid India pay.","GD"],
+["Flow Traders","HQ","₹70–83 LPA",70,83,3,"O","Mumbai / Amsterdam","https://www.flowtraders.com/careers","European prop trading firm. ₹83 LPA fresher CTC reported — among the highest in India. Low-latency C++ trading systems. Intense but very high pay.","BL"],
+["Quadeye","HQ","₹55–67 LPA",55,67,3,"O","Gurugram / Singapore","https://quadeye.com/careers","Quant prop trading. ₹66.7 LPA reported for freshers. C++ low-latency focus, strong math/algo bar. One of India's top-paying quant firms.","BL"],
+["Da Vinci Derivatives","HQ","₹60–70 LPA",60,70,3,"O","Amsterdam / Remote","https://careers.davinciderivatives.com/","European trading firm hiring Indian engineers. ₹70 LPA reported. Trading systems, low-latency engineering.","BL"],
+["ByteDance / TikTok","FG","₹40–59 LPA",40,59,3,"H","Remote / Singapore","https://jobs.bytedance.com/en/","TikTok's parent. ₹59 LPA reported for India. Recommendation systems, large-scale infra. Strong comp, fast pace.","BL"],
+["Coinbase","FG","₹50–90 LPA",50,90,4,"W","Global Remote","https://www.coinbase.com/careers","(YC S12) Crypto exchange, remote-first since 2020. US $120k-230k eng. Hires India remote. Strong crypto comp component + base.","GD"],
+["Grammarly","FG","₹40–70 LPA",40,70,4,"W","Global Remote","https://www.grammarly.com/jobs","AI writing assistant. Hires remote ML/SWE globally; India hiring likely but verify per-role. Strong NLP/ML work, async-friendly.","GD"],
+["Replit","FG","₹45–75 LPA",45,75,4,"W","Global Remote","https://replit.com/careers","(YC S18) Browser IDE + AI agent. Remote-first; verify India eligibility per-role. Cutting-edge dev tools + AI coding. $1B+ valuation.","GD"],
+["Turing","FG","₹30–60 LPA",30,60,4,"W","Global Remote","https://www.turing.com/careers","US AI/talent-cloud company. Hires Indian engineers for US clients on US payroll. ₹30-60 LPA. Long-term full-time remote roles, USD-linked pay.","GD"],
+["Andela","FG","₹28–50 LPA",28,50,4,"W","Global Remote","https://andela.com/careers/","Global engineering network placing Indian devs into US/EU companies. USD-linked pay, fully remote, long-term contracts.","GD"],
+["Oyster HR","FG","₹40–65 LPA",40,65,5,"W","Global Remote","https://www.oysterhr.com/careers","Global employment platform, distributed across 70+ countries. Hires India remote. Strong WLB, async-first, equity, location-fair pay.","GD"],
+["John Snow Labs","FG","₹35–60 LPA",35,60,4,"W","Global Remote","https://www.johnsnowlabs.com/careers/","Healthcare AI/NLP platform (Spark NLP). Team across 32 countries, 14 timezones. State-of-the-art AI research, fully remote.","GD"],
+["Whitespectre","FG","₹35–55 LPA",35,55,5,"W","Global Remote","https://www.whitespectre.com/careers/","Remote product dev consultancy. Ruby/React/mobile. Distributed team, strong engineering culture, async, good USD-linked comp.","GD"],
+["TELUS Digital","FG","₹25–45 LPA",25,45,4,"H","Remote / Bengaluru","https://www.telusdigital.com/careers","Canadian digital/AI services. Hires India for global clients. Steady remote roles, decent comp, AI data + engineering work.","GD"],
+["Unacademy","IU","₹30–48 LPA",30,48,3,"H","Bengaluru","https://unacademy.com/careers","EdTech unicorn. Live-class infra, video streaming at scale. 3-YOE est from fresher data (~₹20L base). Product engineering roles.","BL"],
+["Apollo 24|7","HT","₹25–40 LPA",25,40,3,"H","Hyderabad / Bengaluru","https://www.apollo247.com/careers","HealthTech arm of Apollo Hospitals. ₹30 LPA reported. e-pharmacy, teleconsult, health records at scale.","BL"],
+["Cult.fit","IU","₹32–52 LPA",32,52,3,"H","Bengaluru","https://www.cult.fit/careers","Fitness + health tech unicorn. Consumer app, booking, wearables. 3-YOE est from fresher ₹22L data.","BL"],
+["BharatPe","BF","₹30–55 LPA",30,55,3,"H","Bengaluru / Delhi","https://bharatpe.com/careers","Merchant payments + lending fintech. UPI infra, lending, POS at scale. 3-YOE est from fresher ₹20L data.","BL"],
+["Cashfree Payments","BF","₹30–52 LPA",30,52,3,"H","Bengaluru","https://www.cashfree.com/careers/","(YC) Payments + payouts API. Payment infra, settlement systems. Profitable fintech. 3-YOE est from fresher data.","GD"],
+["CASA Retail AI","ES","₹30–60 LPA",30,60,3,"H","Chennai","https://casaretail.ai/careers","AI for retail — surprisingly high ₹60 LPA reported for top roles. Recommendation engines, retail analytics ML.","BL"],
+["BharatX","BF","₹30–54 LPA",30,54,3,"H","Bengaluru","https://bharatx.tech/","(Y Combinator) Embedded credit fintech. ₹54 LPA reported via hiring challenge. Credit infra, lending APIs. Small elite team.","BL"],
+["GitHub","CD","₹35–60 LPA",35,60,4,"W","Global Remote","https://www.github.careers/","(Microsoft) Dev platform. ₹40 LPA reported. Remote-first culture, many India hires start as OSS contributors. Strong dev-tools work.","LV"],
+["Canva","ES","₹30–55 LPA",30,55,4,"H","Remote / Sydney","https://www.canva.com/careers/","Design platform, $40B. ₹35 LPA reported. Hires India remote + hybrid. Strong product culture, good equity, design-eng excellence.","LV"],
+["Spotify","CD","₹35–60 LPA",35,60,4,"W","Remote / Stockholm","https://www.lifeatspotify.com/jobs","Music streaming. 'Work from anywhere' policy; India remote possible, verify per-role. ML recsys, audio infra, strong WLB.","LV"],
+["Discord","CD","₹35–55 LPA",35,55,4,"W","Global Remote","https://discord.com/careers","Chat platform for communities. Remote-first; verify India eligibility per-role. Real-time infra at massive scale, strong eng culture.","LV"],
+["Zoho","ES","₹22–40 LPA",22,40,4,"O","Chennai","https://www.zoho.com/careers/","Bootstrapped SaaS giant — 50+ products, profitable, no VC. ₹18-30 LPA. Strong WLB, rural offices, long tenures. Anti-hype culture.","GD"],
+["HackerEarth","ES","₹22–38 LPA",22,38,3,"H","Bengaluru","https://www.hackerearth.com/careers/","Developer assessment + hackathons. ₹15-28 LPA. Coding-challenge infra, online judges. Decent product engineering roles.","GD"],
+["Groove HQ","RF","₹35–55 LPA",35,55,5,"W","Global Remote","https://www.groovehq.com/careers","Helpdesk software. Remote 10+ years, team across 30+ countries. Transparent blog, flexible hours, strong async culture.","GD"],
+["HSBC Technology","BF","₹25–45 LPA",25,45,4,"H","Hyderabad / Pune","https://www.hsbc.com/careers","Banking GCC. Large India tech centre. Core banking, payments, risk systems. Stable, good WLB, solid 3-YOE comp.","GD"],
+["Wells Fargo India","BF","₹25–45 LPA",25,45,4,"H","Bengaluru / Hyderabad","https://www.wellsfargo.com/about/careers/","Banking GCC, ~25k India staff. Backend, data, platform engineering. Good WLB + benefits, steady comp.","GD"],
+["Macquarie Group","BF","₹28–55 LPA",28,55,4,"H","Gurugram / Hyderabad","https://www.macquarie.com/careers","Australian investment bank GCC. Strong comp, quant + platform roles, good WLB.","GD"],
+["State Street","BF","₹25–42 LPA",25,42,4,"H","Bengaluru / Hyderabad","https://careers.statestreet.com/","Financial services GCC. Data, platform, backend. Stable, decent 3-YOE comp.","GD"],
+["Capital One India","BF","₹30–55 LPA",30,55,4,"H","Bengaluru","https://www.capitalone.com/careers/","US bank GCC, strong eng culture. AWS-heavy, data + ML. Among the better-paying banking GCCs.","LV"],
+["FIS Global","BF","₹25–40 LPA",25,40,3,"H","Pune / Bengaluru","https://www.fisglobal.com/careers","Fintech infrastructure GCC. Payments, banking platforms. Large India presence.","GD"],
+["Fiserv","BF","₹25–42 LPA",25,42,3,"H","Pune / Noida","https://www.fiserv.com/en/about-fiserv/careers.html","Payments + fintech GCC. Card processing, banking platforms at scale.","GD"],
+["Broadridge","BF","₹25–42 LPA",25,42,3,"H","Hyderabad / Bengaluru","https://www.broadridge.com/careers","Fintech GCC. Trade processing, investor comms tech. Stable, decent comp.","GD"],
+["Synchrony","BF","₹28–48 LPA",28,48,4,"H","Hyderabad","https://www.synchronycareers.com/","US consumer finance GCC. Data + platform, strong analytics culture, good WLB.","GD"],
+["Tesco Technology","GR","₹25–45 LPA",25,45,4,"H","Bengaluru","https://www.tesco-bengaluru.com/","UK retail GCC. e-commerce, supply chain, data platform. Good WLB, strong eng culture.","GD"],
+["Albertsons India","GR","₹25–45 LPA",25,45,4,"H","Bengaluru","https://www.albertsons.com/careers/","US grocery retail GCC. e-commerce, ML personalization, supply chain tech.","GD"],
+["Williams-Sonoma India","GR","₹25–42 LPA",25,42,4,"H","Pune","https://www.williams-sonomainc.com/careers/","US retail GCC. e-commerce platform, data engineering. Good WLB.","GD"],
+["Nike India Tech","GR","₹30–52 LPA",30,52,4,"H","Bengaluru","https://jobs.nike.com/","Nike's India tech centre. Consumer apps, commerce platform, data + ML.","LV"],
+["Wayfair India","GR","₹30–50 LPA",30,50,3,"H","Bengaluru","https://www.aboutwayfair.com/careers","US furniture e-commerce GCC. Logistics, search, recommendation systems.","LV"],
+["Verizon India","GN","₹25–45 LPA",25,45,4,"H","Hyderabad / Chennai","https://www.verizon.com/about/careers","US telecom GCC. Network platforms, 5G systems, data engineering.","GD"],
+["AT&T India","GN","₹25–42 LPA",25,42,4,"H","Hyderabad / Bengaluru","https://www.att.jobs/","US telecom GCC. Network software, cloud platforms, data.","GD"],
+["Comcast India","GN","₹28–48 LPA",28,48,4,"H","Chennai","https://jobs.comcast.com/","US media/telecom GCC. Streaming platforms, network tech, data.","GD"],
+["FedEx India (FDS)","GN","₹25–42 LPA",25,42,4,"H","Hyderabad","https://careers.fedex.com/","Logistics GCC. Routing, tracking systems, data platforms at scale.","GD"],
+["Cummins India Tech","SC","₹25–42 LPA",25,42,4,"H","Pune","https://www.cummins.com/careers","Engine-maker GCC. Embedded systems, IoT, data platforms.","GD"],
+["Caterpillar India","SC","₹25–42 LPA",25,42,4,"H","Bengaluru / Chennai","https://careers.caterpillar.com/","Heavy-equipment GCC. Embedded, IoT, telematics, data engineering.","GD"],
+["John Deere India","SC","₹28–48 LPA",28,48,4,"H","Pune","https://careers.deere.com/","Agri-equipment GCC. Precision-ag software, IoT, ML. Strong eng culture.","GD"],
+["Continental India","SC","₹25–42 LPA",25,42,4,"H","Bengaluru","https://www.continental.com/en/career/","Automotive-tech GCC. ADAS, embedded, autonomous systems.","GD"],
+["Mercedes-Benz R&D India","SC","₹30–55 LPA",30,55,4,"H","Bengaluru","https://www.mercedes-benz.co.in/","Largest M-B R&D outside Germany. Autonomous driving, infotainment, embedded.","LV"],
+["BMW TechWorks India","SC","₹30–52 LPA",30,52,4,"H","Bengaluru / Pune","https://www.bmwtechworks.in/","BMW's India tech hub. Autonomous, connected-car, embedded software.","LV"],
+["Volvo Group India","SC","₹25–45 LPA",25,45,4,"H","Bengaluru","https://www.volvogroup.com/en/careers.html","Truck/auto GCC. Embedded, telematics, autonomous systems.","GD"],
+["Philips India Innovation","HT","₹25–45 LPA",25,45,4,"H","Bengaluru","https://www.careers.philips.com/","Healthtech GCC. Medical imaging software, devices, data + ML.","GD"],
+["GE Aerospace India","SC","₹28–48 LPA",28,48,4,"H","Bengaluru","https://www.geaerospace.com/careers","Aviation GCC. Engine software, simulation, embedded systems.","GD"],
+["Honeywell India","SC","₹25–42 LPA",25,42,4,"H","Bengaluru / Hyderabad","https://careers.honeywell.com/","Industrial-tech GCC. IoT, embedded, building/aerospace software.","GD"],
+["Maersk Technology","GN","₹28–48 LPA",28,48,4,"H","Bengaluru / Pune","https://www.maersk.com/careers","Shipping-logistics GCC. Supply-chain platforms, data engineering at scale.","GD"],
+["Schlumberger (SLB) India","SC","₹28–48 LPA",28,48,4,"H","Pune","https://careers.slb.com/","Energy-tech GCC. Simulation, embedded, data platforms.","GD"],
+["UnitedHealth (Optum) India","HT","₹25–45 LPA",25,45,4,"H","Hyderabad / Bengaluru","https://careers.unitedhealthgroup.com/","Healthcare GCC, huge India presence. Data, ML, platform engineering.","GD"],
+["CVS Health India","HT","₹25–42 LPA",25,42,4,"H","Bengaluru","https://jobs.cvshealth.com/","US pharmacy/health GCC. e-commerce, health platforms, data.","GD"],
+["Pfizer Digital India","HT","₹28–48 LPA",28,48,4,"H","Chennai / Mumbai","https://www.pfizer.com/about/careers","Pharma GCC. Digital health, data science, ML for drug discovery.","GD"],
+["AstraZeneca India (GITC)","HT","₹28–48 LPA",28,48,4,"H","Chennai","https://careers.astrazeneca.com/","Pharma tech GCC. Data engineering, ML, digital health platforms.","GD"],
+["Capillary Technologies","ES","₹26–45 LPA",26,45,3,"H","Bengaluru","https://www.capillarytech.com/careers/","Loyalty + CRM SaaS. AI-driven personalization, global retail clients.","GD"],
+["Netcore Cloud","ES","₹25–42 LPA",25,42,3,"H","Mumbai","https://netcorecloud.com/careers/","Martech SaaS. Email/messaging infra, AI personalization at scale.","GD"],
+["Hevo Data","CD","₹28–48 LPA",28,48,3,"H","Bengaluru","https://hevodata.com/careers/","No-code data-pipeline SaaS. ETL/ELT infra, 150+ connectors. Strong eng.","GD"],
+["Rocketlane","ES","₹26–45 LPA",26,45,4,"W","Remote / Chennai","https://www.rocketlane.com/careers","(YC) Customer-onboarding SaaS. Remote-first, strong product craft, good comp.","GD"],
+["Zluri","ES","₹26–45 LPA",26,45,3,"H","Bengaluru","https://www.zluri.com/careers","SaaS-management platform. Integrations infra, IT automation. Funded, growing.","GD"],
+["Fyle","ES","₹25–42 LPA",25,42,4,"W","Remote / Bengaluru","https://www.fylehq.com/careers","Expense-management SaaS. Remote-friendly, strong eng culture.","GD"],
+["Exotel","ES","₹25–42 LPA",25,42,3,"H","Bengaluru","https://exotel.com/careers/","Cloud-telephony SaaS. Voice/SMS infra at scale, CPaaS platform.","GD"],
+["Locus.sh","ES","₹28–48 LPA",28,48,3,"H","Bengaluru","https://locus.sh/careers","Logistics-optimization SaaS. Route ML, dispatch algorithms. Strong eng.","GD"],
+["Zetwerk","IU","₹26–45 LPA",26,45,3,"H","Bengaluru","https://www.zetwerk.com/careers/","Manufacturing-marketplace unicorn. Supply-chain platform, ops tech at scale.","GD"],
+["OfBusiness","IU","₹26–45 LPA",26,45,3,"H","Gurugram","https://ofbusiness.com/careers","B2B commerce + fintech unicorn. Lending platform, marketplace tech.","GD"],
+["Moglix","IU","₹25–42 LPA",25,42,3,"H","Noida","https://www.moglix.com/careers","B2B industrial-commerce unicorn. Supply-chain + procurement platform.","GD"],
+["Infra.Market","IU","₹26–45 LPA",26,45,3,"H","Mumbai","https://www.infra.market/careers","Construction-materials commerce unicorn. Marketplace + logistics tech.","GD"],
+["Udaan","IU","₹28–48 LPA",28,48,3,"H","Bengaluru","https://udaan.com/careers","B2B e-commerce unicorn. Massive-scale marketplace, logistics, credit infra.","BL"],
+["Fi Money (epiFi)","BF","₹30–52 LPA",30,52,3,"H","Bengaluru","https://fi.money/careers","Neobank by ex-Google PMs. Strong eng bar, modern stack, good comp.","GD"],
+["KreditBee","BF","₹25–42 LPA",25,42,3,"H","Bengaluru","https://www.kreditbee.in/careers","Consumer-lending fintech unicorn. Credit underwriting, risk ML.","GD"],
+["Shiprocket","IU","₹25–42 LPA",25,42,3,"H","Gurugram","https://www.shiprocket.in/careers/","Logistics-aggregation SaaS unicorn. Shipping APIs, tracking at scale.","GD"],
+["Sarvam AI","CD","₹35–70 LPA",35,70,3,"H","Bengaluru","https://www.sarvam.ai/careers","India's leading LLM startup (Lightspeed/Peak XV backed). Building Indic LLMs. Top ML talent, strong comp.","BL"],
+["Krutrim","CD","₹35–65 LPA",35,65,3,"H","Bengaluru","https://www.olakrutrim.com/careers","Ola's AI arm — first Indian AI unicorn. LLMs, AI chips, cloud. Cutting-edge ML work.","BL"],
+["Qure.ai","HT","₹28–50 LPA",28,50,3,"H","Mumbai","https://qure.ai/careers","Medical-imaging AI. Deep-learning for radiology, global deployments. Strong ML work.","GD"],
+["Haptik","CD","₹25–45 LPA",25,45,3,"H","Mumbai","https://www.haptik.ai/careers","Conversational-AI (Jio-owned). LLM bots, NLP at scale. Enterprise clients.","GD"],
+["Mad Street Den","CD","₹26–48 LPA",26,48,3,"H","Chennai","https://www.madstreetden.com/careers/","Computer-vision AI for retail (Vue.ai). CV/ML research + products.","GD"],
+["Tredence","CD","₹25–42 LPA",25,42,3,"H","Bengaluru","https://www.tredence.com/careers","Data-science + AI consulting unicorn. ML engineering, Fortune-500 clients.","GD"],
+["LatentView Analytics","CD","₹25–40 LPA",25,40,3,"H","Chennai","https://www.latentview.com/careers/","Analytics + AI firm. ML, data engineering, global clients.","GD"],
+["Gan.ai","CD","₹30–55 LPA",30,55,3,"H","Bengaluru","https://gan.ai/","Generative-AI video/voice startup (a16z backed). Cutting-edge gen-AI ML.","BL"],
+["PlanetScale","FG","₹45–78 LPA",45,78,4,"W","Global Remote","https://planetscale.com/careers","Serverless MySQL (Vitess). Remote-first; verify India per-role. Deep-infra eng, strong comp.","GD"],
+["Neon","FG","₹45–75 LPA",45,75,4,"W","Global Remote","https://neon.tech/careers","Serverless Postgres. Remote globally; verify India per-role. Database-internals eng.","GD"],
+["Clerk","FG","₹45–75 LPA",45,75,4,"W","Global Remote","https://clerk.com/careers","Auth + user-management infra. Remote; verify India per-role. Modern dev-tools, strong equity.","GD"],
+["WorkOS","FG","₹45–78 LPA",45,78,4,"W","Global Remote","https://workos.com/careers","Enterprise-SSO infra for SaaS. Remote; verify India per-role. Strong eng + comp.","GD"],
+["PostHog","FG","₹45–75 LPA",45,75,5,"W","Global Remote","https://posthog.com/careers","Open-source product analytics. Fully remote, transparent salaries, hires globally. Strong culture.","GD"],
+["Railway","FG","₹40–70 LPA",40,70,4,"W","Global Remote","https://railway.app/careers","Deploy-infra platform. Small remote team; verify India per-role. Modern infra eng.","GD"],
+["Render","FG","₹40–70 LPA",40,70,4,"W","Global Remote","https://render.com/careers","Cloud-hosting (Heroku alt). Remote; verify India per-role. Infra + platform eng.","GD"],
+["Fly.io","FG","₹42–72 LPA",42,72,4,"W","Global Remote","https://fly.io/jobs","Edge-compute platform. Remote globally; verify India per-role. Deep-infra eng.","GD"],
+["Cal.com","FG","₹40–68 LPA",40,68,5,"W","Global Remote","https://cal.com/careers","Open-source scheduling (Calendly alt). Fully remote, hires globally. Strong OSS culture.","GD"],
+["Resend","FG","₹42–70 LPA",42,70,4,"W","Global Remote","https://resend.com/careers","(YC) Email API for devs. Remote; verify India per-role. Modern dev-tools, strong growth.","GD"],
+["Tailscale","FG","₹45–78 LPA",45,78,5,"W","Global Remote","https://tailscale.com/careers","Mesh-VPN networking. Remote-first, hires globally. Deep-networking eng, strong comp.","GD"],
+["1Password","FG","₹42–72 LPA",42,72,4,"W","Global Remote","https://1password.com/careers/","Password-manager. Remote-first; verify India per-role. Security eng, strong comp.","GD"],
+["Contentful","FG","₹40–68 LPA",40,68,4,"W","Remote / Berlin","https://www.contentful.com/careers/","Headless-CMS. Remote-friendly; verify India per-role. API-first content infra.","GD"],
+["Sanity","FG","₹40–68 LPA",40,68,4,"W","Global Remote","https://www.sanity.io/careers","Headless-CMS / content platform. Remote; verify India per-role. Strong dev-tools eng.","GD"],
+["Strapi","FG","₹38–65 LPA",38,65,5,"W","Global Remote","https://strapi.io/careers","Open-source headless CMS. Fully remote, hires globally. OSS-first culture.","GD"],
+["n8n","FG","₹40–70 LPA",40,70,5,"W","Remote / Berlin","https://n8n.io/careers/","Open-source workflow-automation. Remote; verify India per-role. Fast-growing, strong eng.","GD"],
+["Builder.io","FG","₹42–72 LPA",42,72,4,"W","Global Remote","https://www.builder.io/m/careers","Visual-dev + AI for web. Remote; verify India per-role. Modern dev-tools, AI-heavy.","GD"],
+["Framer","FG","₹40–68 LPA",40,68,4,"W","Remote / Amsterdam","https://www.framer.com/careers/","Design + no-code web tool. Remote; verify India per-role. Strong design-eng craft.","GD"],
+["Ramp","FG","₹48–80 LPA",48,80,3,"W","Global Remote","https://ramp.com/careers","Corporate-cards + spend-mgmt. Fast-growing; verify India per-role. Strong eng + equity.","GD"],
+["SAP Labs India","ES","₹28–55 LPA",28,55,4,"H","Bengaluru / Gurugram","https://jobs.sap.com/","Enterprise-software GCC, large India R&D. HANA, cloud, ABAP+Java. Strong WLB, good comp.","LV"],
+["NXP Semiconductors","SC","₹28–50 LPA",28,50,4,"H","Noida / Bengaluru","https://www.nxp.com/careers","Auto + IoT chips GCC. Embedded, verification, firmware. Strong semiconductor work.","GD"],
+["Analog Devices","SC","₹28–52 LPA",28,52,4,"H","Bengaluru","https://www.analog.com/en/about-adi/careers.html","Mixed-signal chip GCC. Analog/RF design, embedded, DSP. High-skill semiconductor.","GD"],
+["MediaTek India","SC","₹30–55 LPA",30,55,4,"H","Noida / Bengaluru","https://www.mediatek.com/careers","Mobile-SoC GCC. Modem, multimedia, SoC verification. Strong comp for chip roles.","GD"],
+["Western Digital","SC","₹28–50 LPA",28,50,4,"H","Bengaluru","https://www.westerndigital.com/company/careers","Storage GCC. Firmware, SSD controllers, embedded. Large India centre.","GD"],
+["Applied Materials","SC","₹28–52 LPA",28,52,4,"H","Bengaluru","https://careers.appliedmaterials.com/","Semiconductor-equipment GCC. Software, controls, data. Strong comp.","GD"],
+["Lam Research","SC","₹28–50 LPA",28,50,4,"H","Bengaluru","https://careers.lamresearch.com/","Chip-equipment GCC. Software, embedded, data systems. Good WLB.","GD"],
+["KLA","SC","₹30–52 LPA",30,52,4,"H","Chennai","https://www.kla.com/careers","Chip-inspection GCC. CV/ML, software, algorithms. Strong technical depth.","GD"],
+["Infineon India","SC","₹28–48 LPA",28,48,4,"H","Bengaluru","https://www.infineon.com/cms/en/careers/","Power + auto chips GCC. Embedded, verification, firmware.","GD"],
+["STMicroelectronics","SC","₹26–46 LPA",26,46,4,"H","Greater Noida","https://www.st.com/careers","Semiconductor GCC. Embedded, design, verification. Large India design centre.","GD"],
+["Renesas India","SC","₹26–46 LPA",26,46,4,"H","Bengaluru / Noida","https://www.renesas.com/careers","Auto + embedded chips GCC. Firmware, verification, MCU design.","GD"],
+["Ericsson India","GN","₹25–45 LPA",25,45,4,"H","Bengaluru / Chennai","https://www.ericsson.com/en/careers","Telecom GCC. 5G, network software, cloud RAN. Large India R&D.","GD"],
+["Nokia India","GN","₹25–45 LPA",25,45,4,"H","Bengaluru","https://www.nokia.com/careers/","Telecom GCC. 5G, optical, network software. Strong R&D presence.","GD"],
+["Dell Technologies","GN","₹25–48 LPA",25,48,4,"H","Bengaluru / Hyderabad","https://jobs.dell.com/","Hardware + storage GCC. Platform, cloud, embedded. Good WLB.","GD"],
+["HPE India","GN","₹26–48 LPA",26,48,4,"H","Bengaluru","https://careers.hpe.com/","Enterprise-infra GCC. Servers, storage, networking software.","GD"],
+["HP Inc India","GN","₹25–45 LPA",25,45,4,"H","Bengaluru","https://jobs.hp.com/","Printing + PC GCC. Firmware, cloud services, embedded.","GD"],
+["eBay India","GR","₹30–55 LPA",30,55,4,"H","Bengaluru","https://careers.ebayinc.com/","E-commerce GCC. Search, payments, ML personalization at scale. Strong comp.","LV"],
+["Citrix (Cloud SW Group)","ES","₹28–48 LPA",28,48,4,"H","Bengaluru","https://www.cloud.com/company/careers","Virtualization GCC. Platform, networking, cloud software.","GD"],
+["Veritas / Cohesity","CD","₹28–50 LPA",28,50,4,"H","Pune / Bengaluru","https://www.cohesity.com/company/careers/","Data-protection GCC. Distributed storage, backup systems.","GD"],
+["Cloudflare India","CY","₹40–70 LPA",40,70,4,"H","Bengaluru / Remote","https://www.cloudflare.com/careers/","Edge-network + security. Growing India team. Strong infra eng, good comp + equity.","LV"],
+["F5 India","CY","₹28–48 LPA",28,48,4,"H","Hyderabad","https://www.f5.com/company/careers","App-security + networking GCC. Platform, traffic-management software.","GD"],
+["Tenable India","CY","₹28–48 LPA",28,48,4,"H","Pune","https://www.tenable.com/careers","Vulnerability-management GCC. Security platform, scanning engines.","GD"],
+["Bank of America India","BF","₹25–45 LPA",25,45,4,"H","Mumbai / Hyderabad / Chennai","https://careers.bankofamerica.com/","Banking GCC, huge India presence. Platform, data, risk systems. Stable, good WLB.","GD"],
+["UBS India","BF","₹28–50 LPA",28,50,4,"H","Pune / Mumbai","https://www.ubs.com/global/en/careers.html","Investment-bank GCC. Trading systems, risk, platform. Good comp.","GD"],
+["Credit Suisse / UBS","BF","₹28–48 LPA",28,48,4,"H","Pune / Mumbai","https://www.ubs.com/global/en/careers.html","IB GCC (now UBS). Risk, trading, platform engineering.","GD"],
+["NatWest India","BF","₹25–42 LPA",25,42,4,"H","Gurugram / Bengaluru / Chennai","https://jobs.natwestgroup.com/","UK-bank GCC. Digital banking, data, platform. Good WLB.","GD"],
+["Discover India","BF","₹28–48 LPA",28,48,4,"H","Hyderabad","https://jobs.discover.com/","US card-issuer GCC. Data, platform, payments engineering.","GD"],
+["Block (Square / Cash App)","BF","₹45–78 LPA",45,78,4,"W","Global Remote","https://block.xyz/careers","Payments + crypto (Jack Dorsey). Remote-friendly; verify India per-role. Strong eng + comp.","LV"],
+["Adyen","BF","₹35–60 LPA",35,60,4,"H","Remote / Amsterdam","https://www.adyen.com/careers","Global payments platform. Some India remote; verify per-role. Payment infra at scale.","GD"],
+["Checkout.com","BF","₹35–60 LPA",35,60,4,"W","Global Remote","https://www.checkout.com/careers","Payments infra. Remote-friendly; verify India per-role. Strong fintech eng.","GD"],
+["Nium","BF","₹30–52 LPA",30,52,3,"H","Remote / Bengaluru","https://www.nium.com/careers","(Singapore) Cross-border payments unicorn. Has India team. Payment infra.","GD"],
+["Airwallex","BF","₹32–55 LPA",32,55,3,"H","Bengaluru / Remote","https://www.airwallex.com/careers","Global payments unicorn. Growing India team. Payment + treasury infra.","GD"],
+["Revolut India","BF","₹35–60 LPA",35,60,3,"H","Remote / Mumbai","https://www.revolut.com/careers/","UK neobank entering India. Modern banking infra, strong eng bar.","GD"],
+["BlackRock India","BF","₹30–55 LPA",30,55,4,"H","Mumbai / Gurugram","https://careers.blackrock.com/","Asset-mgmt GCC (Aladdin platform). Quant, data, platform. Strong comp.","LV"],
+["Two Sigma India","HQ","₹45–75 LPA",45,75,3,"H","Remote / Bengaluru","https://www.twosigma.com/careers/","Quant hedge fund. Very high bar, strong comp. Data + ML + trading systems.","LV"],
+["Jane Street","HQ","₹70–120 LPA",70,120,3,"O","Remote / NYC","https://www.janestreet.com/join-jane-street/","Elite quant trading firm. OCaml, very high comp, extremely selective. Hires globally.","LV"],
+["Hudson River Trading","HQ","₹60–100 LPA",60,100,3,"O","Remote / NYC","https://www.hudsonrivertrading.com/careers/","Elite HFT firm. C++/Python, very high comp, top algo bar. Hires globally.","LV"],
+["Akuna Capital","HQ","₹50–80 LPA",50,80,3,"H","Remote / Chicago","https://akunacapital.com/careers","Options-trading firm. C++/Python, strong comp. Some India remote.","BL"],
+["Squarepoint Capital","HQ","₹45–72 LPA",45,72,3,"H","Remote / London","https://www.squarepoint-capital.com/careers","Quant hedge fund. Strong comp, data + trading systems.","BL"],
+["Qube Research (QRT)","HQ","₹45–72 LPA",45,72,3,"H","Remote / London","https://www.qube-rt.com/careers","Quant trading firm. Strong comp, systematic strategies, ML.","BL"],
+["Setu","BF","₹28–48 LPA",28,48,3,"H","Bengaluru","https://setu.co/careers","API-banking infra (Pine Labs owned). Fintech rails, strong eng culture.","GD"],
+["M2P Fintech","BF","₹25–45 LPA",25,45,3,"H","Chennai","https://m2pfintech.com/careers/","Banking-as-a-service unicorn. Card-issuing, payments APIs at scale.","GD"],
+["Decentro","BF","₹25–42 LPA",25,42,3,"H","Bengaluru","https://decentro.tech/careers","API-banking platform. Fintech infrastructure, integrations.","GD"],
+["Signzy","BF","₹25–42 LPA",25,42,3,"H","Bengaluru","https://signzy.com/careers/","Digital-onboarding + KYC fintech. AI-powered verification.","GD"],
+["HyperVerge","CD","₹28–48 LPA",28,48,3,"H","Bengaluru","https://hyperverge.co/careers","AI-KYC + face-recognition. CV/ML, identity verification at scale.","GD"],
+["IDfy","BF","₹25–42 LPA",25,42,3,"H","Mumbai","https://www.idfy.com/careers/","Identity-verification fintech. Fraud + KYC platform.","GD"],
+["Yubi (CredAvenue)","BF","₹28–50 LPA",28,50,3,"H","Mumbai / Bengaluru","https://www.go-yubi.com/careers/","Debt-marketplace fintech unicorn. Lending + credit infra at scale.","GD"],
+["KredX","BF","₹25–42 LPA",25,42,3,"H","Bengaluru","https://www.kredx.com/careers/","Invoice-discounting fintech. Supply-chain finance platform.","GD"],
+["Uni Cards","BF","₹25–45 LPA",25,45,3,"H","Bengaluru","https://www.uni.cards/","Credit-card fintech. Modern card + lending infra.","GD"],
+["OneCard","BF","₹28–48 LPA",28,48,3,"H","Pune","https://www.getonecard.app/","Mobile-first credit-card unicorn (FPL). Modern stack, strong eng.","GD"],
+["Niyo","BF","₹25–45 LPA",25,45,3,"H","Bengaluru","https://www.goniyo.com/careers","Neobank. Banking + payments infra, strong eng culture.","GD"],
+["EnKash","BF","₹24–40 LPA",24,40,3,"H","Mumbai / Bengaluru","https://www.enkash.com/careers","B2B spend-mgmt fintech. Corporate cards + payments platform.","GD"],
+["Smallcase","BF","₹28–50 LPA",28,50,3,"H","Bengaluru","https://www.smallcase.com/careers/","Investment-platform fintech. Curated portfolios, strong eng + product.","GD"],
+["Sensibull","BF","₹26–45 LPA",26,45,3,"H","Bengaluru","https://sensibull.com/careers","Options-trading platform (Zerodha-backed). Derivatives analytics.","GD"],
+["Dezerv","BF","₹26–45 LPA",26,45,3,"H","Mumbai","https://dezerv.in/","Wealth-management fintech (ex-IIFL founders). Modern stack.","GD"],
+["Scripbox","BF","₹25–42 LPA",25,42,3,"H","Bengaluru","https://scripbox.com/careers/","Wealth-management fintech. Mutual-funds + advisory platform.","GD"],
+["Kuvera","BF","₹25–42 LPA",25,42,3,"H","Bengaluru","https://kuvera.in/","Direct mutual-fund + wealth platform. Clean product, decent comp.","GD"],
+["Dhan","BF","₹26–48 LPA",26,48,3,"H","Mumbai","https://dhan.co/","Trading platform for active traders. Fast-growing, modern stack.","GD"],
+["Fyers","BF","₹25–42 LPA",25,42,3,"H","Bengaluru","https://fyers.in/careers/","Discount-broking + trading-API platform. Bootstrapped, profitable.","GD"],
+["Vested Finance","BF","₹25–42 LPA",25,42,3,"W","Remote / Mumbai","https://vestedfinance.com/","US-stocks investing for Indians. Remote-friendly, fintech infra.","GD"],
+["Mobile Premier League (MPL)","IU","₹28–50 LPA",28,50,3,"H","Bengaluru","https://www.mpl.live/careers","Mobile-gaming unicorn. Real-money gaming infra, high concurrency, ML.","GD"],
+["Games24x7","IU","₹30–55 LPA",30,55,3,"H","Mumbai / Bengaluru","https://www.games24x7.com/careers","Real-money gaming (RummyCircle, My11Circle). High scale, ML, strong comp.","GD"],
+["Zupee","IU","₹28–50 LPA",28,50,3,"H","Gurugram","https://zupee.com/careers","Skill-gaming unicorn. Real-money games, high concurrency systems.","GD"],
+["Winzo","IU","₹26–48 LPA",26,48,3,"H","Delhi NCR","https://www.winzogames.com/careers","Vernacular gaming unicorn. Multiplayer infra, large scale.","GD"],
+["Nazara Technologies","IU","₹24–42 LPA",24,42,3,"H","Mumbai","https://www.nazara.com/careers","Listed gaming company. Mobile games, esports, gaming platforms.","GD"],
+["SuperGaming","IU","₹26–48 LPA",26,48,3,"H","Pune","https://www.supergaming.com/careers","Game-studio (Indus Battle Royale). Game-engine + multiplayer infra.","GD"],
+["CoinDCX","BF","₹28–50 LPA",28,50,3,"H","Mumbai / Hyderabad","https://coindcx.com/careers","Crypto-exchange unicorn. Trading infra, wallets, blockchain eng.","GD"],
+["CoinSwitch","BF","₹28–50 LPA",28,50,3,"H","Bengaluru","https://coinswitch.co/careers","Crypto-investing unicorn. Trading platform, high scale.","GD"],
+["WazirX","BF","₹25–45 LPA",25,45,3,"H","Mumbai / Remote","https://wazirx.com/careers/","Crypto-exchange. Trading engine, wallets, blockchain infra.","GD"],
+["PharmEasy","HT","₹25–45 LPA",25,45,3,"H","Mumbai / Bengaluru","https://pharmeasy.in/careers","e-Pharmacy unicorn. Supply-chain, e-commerce, health platform at scale.","GD"],
+["Tata 1mg","HT","₹26–48 LPA",26,48,3,"H","Gurugram","https://www.1mg.com/jobs","e-Pharmacy + diagnostics (Tata-owned). Health platform, e-commerce.","GD"],
+["Practo","HT","₹25–45 LPA",25,45,3,"H","Bengaluru","https://www.practo.com/careers","Doctor-discovery + teleconsult platform. Health records, booking at scale.","GD"],
+["HealthifyMe","HT","₹26–48 LPA",26,48,3,"H","Bengaluru","https://www.healthifyme.com/careers","Health + fitness app with AI coach. ML nutrition, large consumer scale.","GD"],
+["MediBuddy","HT","₹25–45 LPA",25,45,3,"H","Bengaluru","https://www.medibuddy.in/careers","Digital-healthcare unicorn. Teleconsult, pharmacy, health-benefits platform.","GD"],
+["Pristyn Care","HT","₹25–42 LPA",25,42,3,"H","Gurugram","https://www.pristyncare.com/careers/","Surgery-care unicorn. Health-ops platform, patient management.","GD"],
+["Plum","HT","₹26–48 LPA",26,48,3,"H","Bengaluru","https://www.plumhq.com/careers","Health-insurance benefits platform. Strong eng, modern stack.","GD"],
+["Onsurity","HT","₹25–42 LPA",25,42,3,"H","Bengaluru","https://www.onsurity.com/careers/","Employee-healthcare + insurance fintech. Benefits platform.","GD"],
+["Eka.care","HT","₹26–45 LPA",26,45,3,"H","Bengaluru","https://www.eka.care/careers","Health-records + ABDM platform. Modern health infra, AI.","GD"],
+["HealthPlix","HT","₹25–42 LPA",25,42,3,"H","Bengaluru","https://www.healthplix.com/careers","EMR for doctors. Clinical-decision-support, health platform.","GD"],
+["PhysicsWallah","IU","₹25–45 LPA",25,45,3,"H","Noida","https://www.physicswallah.onlinecareers.co/","Edtech unicorn, profitable. Video + live-class infra at huge scale.","GD"],
+["upGrad","IU","₹25–45 LPA",25,45,3,"H","Mumbai","https://www.upgrad.com/careers/","Higher-ed + upskilling unicorn. LMS, video, large-scale platform.","GD"],
+["Scaler","ES","₹28–50 LPA",28,50,3,"H","Bengaluru","https://www.scaler.com/careers/","Tech-upskilling (InterviewBit). Strong eng culture, good comp.","GD"],
+["Coding Ninjas","ES","₹25–42 LPA",25,42,3,"H","Gurugram","https://www.codingninjas.com/careers","Coding-education platform. LMS, online judges, learning infra.","GD"],
+["Classplus","IU","₹26–45 LPA",26,45,3,"H","Noida","https://classplus.co/careers","SaaS for educators unicorn. Course-creation + commerce platform.","GD"],
+["Teachmint","ES","₹26–45 LPA",26,45,3,"H","Bengaluru","https://teachmint.com/careers","Classroom-infra SaaS. Teaching tools, video, school-management.","GD"],
+["Cuemath","ES","₹24–42 LPA",24,42,3,"H","Bengaluru","https://www.cuemath.com/careers/","Math-learning platform. Live classes, adaptive learning.","GD"],
+["Great Learning","ES","₹25–42 LPA",25,42,3,"H","Bengaluru","https://www.greatlearning.in/careers","Higher-ed + upskilling (BYJU-owned). LMS, large platform.","GD"],
+["Rapido","IU","₹28–50 LPA",28,50,3,"H","Bengaluru","https://rapido.bike/careers","Bike-taxi + mobility unicorn. Matching, routing, real-time at scale.","GD"],
+["BluSmart","IU","₹26–45 LPA",26,45,3,"H","Gurugram","https://blusmart.com/careers","EV ride-hailing. Fleet-mgmt, real-time dispatch, charging infra.","GD"],
+["Porter","IU","₹28–50 LPA",28,50,3,"H","Bengaluru","https://porter.in/careers","Intra-city logistics unicorn. Matching, routing, real-time tracking.","GD"],
+["Delhivery","IU","₹26–48 LPA",26,48,3,"H","Gurugram","https://www.delhivery.com/careers","Listed logistics giant. Routing, sorting-automation, supply-chain ML.","GD"],
+["Ecom Express","IU","₹24–42 LPA",24,42,3,"H","Gurugram","https://www.ecomexpress.in/careers/","Logistics for e-commerce. Routing, tracking, fulfilment tech.","GD"],
+["Shadowfax","IU","₹25–45 LPA",25,45,3,"H","Bengaluru","https://www.shadowfax.in/careers/","Last-mile logistics unicorn. Real-time dispatch, gig-fleet management.","GD"],
+["XpressBees","IU","₹24–42 LPA",24,42,3,"H","Pune","https://www.xpressbees.com/careers","Logistics unicorn. Sorting, routing, tracking systems at scale.","GD"],
+["BlackBuck","IU","₹26–45 LPA",26,45,3,"H","Bengaluru","https://blackbuck.com/careers","Trucking-marketplace unicorn (listed). Fleet + freight platform.","GD"],
+["FarEye","ES","₹26–45 LPA",26,45,3,"H","Noida","https://www.fareye.com/careers","Logistics-SaaS. Delivery-orchestration, route ML, global clients.","GD"],
+["GoComet","ES","₹25–42 LPA",25,42,3,"H","Mumbai / Remote","https://www.gocomet.com/careers","Logistics-SaaS. Freight-procurement + visibility, AI optimization.","GD"],
+["Ninjacart","IU","₹26–48 LPA",26,48,3,"H","Bengaluru","https://ninjacart.com/careers/","Agri-supply-chain unicorn. B2B fresh-produce platform at scale.","GD"],
+["DeHaat","IU","₹25–45 LPA",25,45,3,"H","Gurugram / Patna","https://dehaat.com/careers","Agritech unicorn. Farmer-platform, supply chain, advisory ML.","GD"],
+["Captain Fresh","IU","₹26–45 LPA",26,45,3,"H","Bengaluru","https://captainfresh.in/careers","Seafood-supply-chain unicorn. B2B marketplace, logistics tech.","GD"],
+["Country Delight","IU","₹25–44 LPA",25,44,3,"H","Gurugram","https://www.countrydelight.in/careers","D2C dairy + essentials. Subscription, supply-chain, logistics tech.","GD"],
+["Mamaearth (Honasa)","IU","₹25–42 LPA",25,42,3,"H","Gurugram","https://honasa.in/careers","D2C beauty unicorn (listed). e-commerce, martech, data platform.","GD"],
+["boAt","IU","₹24–42 LPA",24,42,3,"H","Delhi NCR","https://www.boat-lifestyle.com/pages/careers","D2C audio-wearables. e-commerce, IoT firmware, app platform.","GD"],
+["Lenskart","IU","₹28–50 LPA",28,50,3,"H","Gurugram","https://www.lenskart.com/careers","Eyewear unicorn. e-commerce, AR try-on, supply-chain, retail tech.","GD"],
+["FirstCry","IU","₹25–45 LPA",25,45,3,"H","Pune","https://www.firstcry.com/careers","Baby-products e-commerce (listed). Marketplace, supply-chain tech.","GD"],
+["Purplle","IU","₹25–44 LPA",25,44,3,"H","Mumbai","https://www.purplle.com/careers","Beauty e-commerce unicorn. Recommendation ML, commerce platform.","GD"],
+["LambdaTest","ES","₹26–48 LPA",26,48,3,"H","Noida / Remote","https://www.lambdatest.com/careers","Cross-browser testing cloud. Test-infra at scale, remote-friendly.","GD"],
+["Facets.cloud","ES","₹28–48 LPA",28,48,3,"H","Bengaluru","https://www.facets.cloud/careers","DevOps-automation SaaS. Platform-engineering tooling, IaC.","GD"],
+["Devtron","ES","₹26–45 LPA",26,45,3,"H","Remote / Delhi","https://devtron.ai/careers/","Open-source K8s-delivery platform. DevOps tooling, remote-friendly.","GD"],
+["Last9","CD","₹30–52 LPA",30,52,4,"W","Remote / Bengaluru","https://last9.io/careers/","Observability SaaS. Remote-first, high-scale telemetry, strong eng.","GD"],
+["Acceldata","CD","₹30–55 LPA",30,55,3,"H","Bengaluru / Remote","https://www.acceldata.io/careers","Data-observability unicorn. Data-platform monitoring, ML.","GD"],
+["Tanla Platforms","ES","₹25–42 LPA",25,42,3,"H","Hyderabad","https://www.tanla.com/careers","CPaaS (listed). Messaging infra at massive scale, blockchain CPaaS.","GD"],
+["Route Mobile","ES","₹24–42 LPA",24,42,3,"H","Mumbai","https://routemobile.com/careers/","CPaaS (listed). Global messaging infra, SMS/voice APIs at scale.","GD"],
+["Zenskar","ES","₹26–46 LPA",26,46,4,"W","Remote / Bengaluru","https://www.zenskar.com/careers","(YC) Billing-automation SaaS. Remote-first, usage-billing infra.","GD"],
+["Springworks","ES","₹25–45 LPA",25,45,5,"W","Global Remote","https://www.springworks.in/careers/","HR-tech SaaS. Fully remote, distributed globally, strong async culture.","GD"],
+["greytHR","ES","₹24–40 LPA",24,40,3,"H","Bengaluru","https://www.greythr.com/careers/","HR + payroll SaaS. Profitable, large SMB base, decent comp.","GD"],
+["Skyroot Aerospace","SC","₹25–48 LPA",25,48,3,"H","Hyderabad","https://skyroot.in/careers","Private rocket company (first Indian private launch). Avionics, embedded, simulation.","BL"],
+["Agnikul Cosmos","SC","₹25–48 LPA",25,48,3,"H","Chennai","https://www.agnikul.in/#/careers","3D-printed-rocket startup (IIT-M). Avionics, propulsion software, embedded.","BL"],
+["Pixxel","SC","₹28–52 LPA",28,52,3,"H","Bengaluru","https://www.pixxel.space/careers","Hyperspectral-satellite startup. Space software, CV/ML for earth imaging.","BL"],
+["GalaxEye","SC","₹26–48 LPA",26,48,3,"H","Bengaluru","https://www.galaxeye.space/","Satellite-imaging startup (IIT-M). SAR + optical fusion, ML.","BL"],
+["Digantara","SC","₹26–48 LPA",26,48,3,"H","Bengaluru","https://www.digantara.co.in/","Space-situational-awareness startup. Orbital tracking, data + ML.","BL"],
+["Euler Motors","SC","₹25–45 LPA",25,45,3,"H","Delhi NCR","https://eulermotors.com/careers/","Commercial-EV startup. Powertrain software, embedded, telematics.","GD"],
+["Ultraviolette","SC","₹25–45 LPA",25,45,3,"H","Bengaluru","https://www.ultraviolette.com/careers","Electric-motorcycle startup. Powertrain software, embedded, BMS.","GD"],
+["Log9 Materials","SC","₹24–42 LPA",24,42,3,"H","Bengaluru","https://www.log9materials.com/careers","Battery-tech + energy-storage startup. BMS, embedded, data.","BL"],
+["Battery Smart","IU","₹25–45 LPA",25,45,3,"H","Delhi NCR","https://batterysmart.in/careers","Battery-swapping network unicorn. IoT, fleet, energy software.","GD"],
+["Exponent Energy","SC","₹25–44 LPA",25,44,3,"H","Bengaluru","https://www.exponent.energy/","Fast-charging EV-energy startup. Embedded, BMS, charging infra.","BL"],
+["Globant India","ES","₹25–45 LPA",25,45,3,"H","Pune / Bengaluru","https://www.globant.com/careers","Digital-engineering MNC. Product work for global clients, modern stack.","GD"],
+["Nagarro","ES","₹24–44 LPA",24,44,3,"H","Gurugram","https://www.nagarro.com/en/careers","Digital-engineering MNC. Product + cloud work, decent comp for 3-YOE.","GD"],
+["Tata Elxsi","SC","₹24–42 LPA",24,42,3,"H","Bengaluru","https://www.tataelxsi.com/careers","Design + embedded-tech (listed). Auto, media, healthcare software.","GD"],
+["KPIT Technologies","SC","₹24–42 LPA",24,42,3,"H","Pune","https://www.kpit.com/careers/","Auto-software specialist (listed). ADAS, embedded, autonomous systems.","GD"],
+["Cyient","SC","₹24–40 LPA",24,40,3,"H","Hyderabad","https://www.cyient.com/careers","Engineering-services (listed). Embedded, aero, geospatial software.","GD"],
+["HappiestMinds","ES","₹24–42 LPA",24,42,3,"H","Bengaluru","https://www.happiestminds.com/careers/","Digital-transformation IT (listed). Product + cloud + security work.","GD"],
+["Tiger Analytics","CD","₹26–48 LPA",26,48,3,"H","Chennai / Remote","https://www.tigeranalytics.com/careers/","AI + analytics consulting. ML engineering, Fortune-500 clients, remote-friendly.","GD"],
+["Quantiphi","CD","₹26–46 LPA",26,46,3,"H","Mumbai / Remote","https://quantiphi.com/careers/","AI-first consulting. ML/MLOps, cloud-AI, global clients, remote-friendly.","GD"],
+["TheMathCompany (MathCo)","CD","₹25–44 LPA",25,44,3,"H","Bengaluru","https://themathcompany.com/careers","AI + analytics firm. ML engineering, data products, enterprise clients.","GD"],
+["Brillio","ES","₹24–42 LPA",24,42,3,"H","Bengaluru","https://www.brillio.com/careers/","Digital-tech consulting. Cloud, data, product work for global clients.","GD"],
+["Sigmoid","CD","₹25–45 LPA",25,45,3,"H","Bengaluru","https://www.sigmoid.com/careers/","Data-engineering + AI firm. ML platforms, data pipelines at scale.","GD"],
+["TrueFoundry","CD","₹30–55 LPA",30,55,3,"H","Bengaluru / Remote","https://www.truefoundry.com/careers","MLOps-platform startup (Sequoia-backed). ML-infra, K8s, strong eng bar.","GD"],
+["Portkey","CD","₹30–52 LPA",30,52,4,"W","Remote / Bengaluru","https://portkey.ai/careers","LLM-gateway + observability (YC). Remote-first, AI-infra, fast growth.","GD"],
+["Inferless","CD","₹28–50 LPA",28,50,4,"W","Remote / Bengaluru","https://www.inferless.com/careers","Serverless-GPU-inference startup. AI-infra, remote-friendly.","BL"],
+["Simplismart","CD","₹28–52 LPA",28,52,3,"H","Bengaluru","https://www.simplismart.ai/","ML-inference-optimization startup. Fast LLM serving, AI infra.","BL"],
+["Composio","CD","₹30–55 LPA",30,55,3,"H","Bengaluru / SF","https://composio.dev/","AI-agent-tooling startup (YC). Agent infra, integrations, fast-growing.","BL"],
+["Neysa","CD","₹30–55 LPA",30,55,3,"H","Mumbai","https://www.neysa.ai/","AI-cloud + GPU-infra startup (well-funded). AI infrastructure, MLOps.","BL"],
+["Anthropic","FG","₹90–180 LPA",90,180,3,"W","Global Remote","https://www.anthropic.com/careers","Claude maker, top AI-safety lab. US TC $300k-900k. Remote roles; verify India eligibility per-role. Exceptional pay + equity.","LV"],
+["Mistral AI","FG","₹70–130 LPA",70,130,3,"W","Remote / Paris","https://mistral.ai/careers/","European frontier LLM lab. Strong comp + equity. Remote roles; verify India eligibility per-role.","LV"],
+["Hugging Face","FG","₹60–110 LPA",60,110,4,"W","Global Remote","https://huggingface.co/jobs","Open-source AI hub. Fully remote, hires globally including India. ML eng, strong OSS culture.","GD"],
+["Perplexity AI","FG","₹70–130 LPA",70,130,3,"W","Global Remote","https://www.perplexity.ai/careers","AI-search unicorn. Remote-friendly; verify India per-role. Strong comp + equity, fast growth.","LV"],
+["Together AI","FG","₹65–120 LPA",65,120,3,"W","Global Remote","https://www.together.ai/careers","AI-inference cloud. Remote; verify India per-role. GPU infra, ML systems, strong comp.","GD"],
+["ElevenLabs","FG","₹60–110 LPA",60,110,4,"W","Global Remote","https://elevenlabs.io/careers","Voice-AI unicorn. Fully remote, hires globally incl. India. Audio ML, strong equity.","GD"],
+["Pinecone","FG","₹55–95 LPA",55,95,4,"W","Global Remote","https://www.pinecone.io/careers/","Vector-database leader. Remote; verify India per-role. AI-infra eng, strong comp.","GD"],
+["LangChain","FG","₹55–95 LPA",55,95,4,"W","Global Remote","https://www.langchain.com/careers","LLM-app framework. Remote; verify India per-role. AI dev-tools, fast-growing.","GD"],
+["Cursor (Anysphere)","FG","₹70–140 LPA",70,140,3,"W","Global Remote","https://www.cursor.com/careers","AI-code-editor unicorn (fastest-growing dev tool). Remote; verify India per-role. Top comp + equity.","LV"],
+["Replicate","FG","₹55–95 LPA",55,95,4,"W","Global Remote","https://replicate.com/about","Run-ML-models-via-API platform. Remote; verify India per-role. AI infra, strong eng.","GD"],
+["Modal","FG","₹55–95 LPA",55,95,4,"W","Global Remote","https://modal.com/careers","Serverless-compute for AI/ML. Remote; verify India per-role. Deep-infra eng.","GD"],
+["Baseten","FG","₹55–95 LPA",55,95,4,"W","Global Remote","https://www.baseten.co/careers/","ML-model-serving infra. Remote; verify India per-role. AI infra, strong comp.","GD"],
+["Fireworks AI","FG","₹60–105 LPA",60,105,3,"W","Global Remote","https://fireworks.ai/careers","Fast-LLM-inference platform. Remote; verify India per-role. AI infra, strong comp + equity.","GD"],
+["Groq","FG","₹60–110 LPA",60,110,3,"W","Remote / Mountain View","https://groq.com/careers/","AI-inference-chip company (LPU). Remote; verify India per-role. Hardware + systems eng.","LV"],
+["Weaviate","FG","₹50–90 LPA",50,90,4,"W","Global Remote","https://weaviate.io/company/careers","Open-source vector DB. Fully remote, hires globally. AI-infra eng, OSS culture.","GD"],
+["Harvey AI","FG","₹70–130 LPA",70,130,3,"W","Global Remote","https://www.harvey.ai/careers","Legal-AI unicorn (Sequoia/OpenAI-backed). Remote; verify India per-role. Top comp + equity.","LV"],
+["Sierra","FG","₹70–130 LPA",70,130,3,"W","Global Remote","https://sierra.ai/careers","Conversational-AI (Bret Taylor). Remote; verify India per-role. Strong comp + equity.","GD"],
+["Cresta","FG","₹55–95 LPA",55,95,3,"W","Global Remote","https://cresta.com/careers/","Contact-center-AI unicorn. Remote; verify India per-role. NLP/ML, strong comp.","GD"],
+["Runway","FG","₹60–105 LPA",60,105,3,"W","Global Remote","https://runwayml.com/careers/","Generative-video-AI unicorn. Remote; verify India per-role. CV/ML research + products.","GD"],
+["Stability AI","FG","₹55–100 LPA",55,100,3,"W","Global Remote","https://stability.ai/careers","Open-source gen-AI (Stable Diffusion). Remote; verify India per-role. ML research.","GD"],
+["Abridge","FG","₹60–105 LPA",60,105,3,"W","Global Remote","https://www.abridge.com/careers","Medical-AI-scribe unicorn. Remote; verify India per-role. Healthcare NLP/ML, strong comp.","GD"],
+["Character.AI","FG","₹65–120 LPA",65,120,3,"W","Global Remote","https://character.ai/careers","Conversational-AI (Google-backed). Remote; verify India per-role. LLM eng, strong comp.","GD"],
+["Scale AI","FG","₹55–100 LPA",55,100,3,"W","Global Remote","https://scale.com/careers","AI-data-labeling unicorn. Remote; verify India per-role. ML infra + data, strong comp.","LV"],
+["Airbyte","FG","₹45–80 LPA",45,80,4,"W","Global Remote","https://airbyte.com/careers","Open-source data-integration. Fully remote, hires globally. ELT infra, OSS culture.","GD"],
+["Hightouch","FG","₹45–80 LPA",45,80,4,"W","Global Remote","https://hightouch.com/careers","Reverse-ETL / data-activation. Remote; verify India per-role. Data infra, strong eng.","GD"],
+["Census","FG","₹45–78 LPA",45,78,4,"W","Global Remote","https://www.getcensus.com/careers","Data-activation platform. Remote; verify India per-role. Data infra eng.","GD"],
+["Roblox","FG","₹50–90 LPA",50,90,3,"H","Remote / Gurugram","https://careers.roblox.com/","Gaming platform. Has India presence. Game infra, engine, real-time at scale.","LV"],
+["Dukaan","IU","₹25–45 LPA",25,45,3,"H","Bengaluru","https://mydukaan.io/careers","(YC) e-commerce enablement for SMBs. D2C-store builder, payments, strong eng.","GD"],
+["Open Financial","BF","₹28–50 LPA",28,50,3,"H","Bengaluru","https://open.money/careers/","(YC) Neobank for SMBs unicorn. Banking + payments infra, strong eng.","GD"],
+["DotPe","BF","₹26–46 LPA",26,46,3,"H","Gurugram","https://dotpe.in/careers","(YC-style) Merchant-commerce + payments. Ordering, payments infra at scale.","GD"],
+["Spendflo","ES","₹26–46 LPA",26,46,4,"W","Remote / Chennai","https://www.spendflo.com/careers","(YC) SaaS-buying + spend-mgmt. Remote-first, procurement automation.","GD"],
+["SaaS Labs","ES","₹28–48 LPA",28,48,4,"W","Remote / Noida","https://www.saaslabs.co/careers","(YC) SaaS suite (JustCall, Helpwise). Remote-friendly, CPaaS + tools.","GD"],
+["Hyperbots","CD","₹28–50 LPA",28,50,3,"H","Bengaluru","https://www.hyperbots.com/","(YC) Finance-AI-agents startup. AI/ML for accounting automation.","BL"],
+["Pinwheel","FG","₹45–78 LPA",45,78,4,"W","Global Remote","https://www.pinwheelapi.com/careers","(YC) Payroll-data API (US fintech). Remote; verify India per-role. Fintech infra.","GD"],
+["Apna","IU","₹28–50 LPA",28,50,3,"H","Bengaluru","https://apna.co/careers","Jobs + professional-network unicorn (Tiger/Sequoia). High-scale platform, ML matching.","GD"],
+["Mensa Brands","IU","₹25–42 LPA",25,42,3,"H","Bengaluru","https://www.mensabrands.com/careers","D2C house-of-brands unicorn (Accel/Tiger). e-commerce, brand-tech platform.","GD"],
+["ElasticRun","IU","₹25–44 LPA",25,44,3,"H","Pune","https://www.elastic.run/careers","B2B-commerce + logistics unicorn (Softbank). Supply-chain platform at scale.","GD"],
+["Vedantu","IU","₹24–42 LPA",24,42,3,"H","Bengaluru","https://www.vedantu.com/careers","Live-tutoring unicorn (Tiger/Accel). Video + live-class infra at scale.","GD"],
+["Eruditus","ES","₹28–48 LPA",28,48,3,"H","Mumbai / Remote","https://eruditus.com/careers/","Exec-education unicorn (Softbank/Accel). LMS + global course platform, remote-friendly.","GD"],
+["Atomberg","IU","₹25–44 LPA",25,44,3,"H","Mumbai","https://atomberg.com/careers","Smart-appliances unicorn (Peak XV). IoT, embedded, app platform.","GD"],
+["Rebel Foods","IU","₹26–46 LPA",26,46,3,"H","Mumbai","https://www.rebelfoods.com/careers","Cloud-kitchen unicorn (Peak XV/Coatue). Food-ops platform, logistics tech at scale.","GD"],
+["Yulu","IU","₹24–42 LPA",24,42,3,"H","Bengaluru","https://www.yulu.bike/careers","EV-mobility unicorn (Bajaj/Magna). IoT, fleet, battery-swap software.","GD"],
+["GoMechanic","IU","₹24–42 LPA",24,42,3,"H","Gurugram","https://gomechanic.in/careers","Car-service-aggregation (Sequoia/Tiger). Ops platform, booking, logistics.","GD"],
+["Kissht","BF","₹25–42 LPA",25,42,3,"H","Mumbai","https://kissht.com/careers/","Consumer-lending fintech (Vertex/Brunei). Credit underwriting, risk ML.","GD"],
+["Truemeds","HT","₹25–42 LPA",25,42,3,"H","Mumbai","https://truemeds.in/careers","e-Pharmacy (Peak XV/WestBridge). Supply-chain, e-commerce, health platform.","GD"],
+["Ultrahuman","HT","₹28–50 LPA",28,50,3,"H","Bengaluru","https://www.ultrahuman.com/careers/","Health-wearables unicorn (Nexus/Steadview). IoT, biosensors, health ML.","GD"],
+["Probo","IU","₹28–50 LPA",28,50,3,"H","Gurugram","https://probo.in/careers","Opinion-trading platform (Peak XV/Fundamentum). High-concurrency real-time systems.","GD"],
+["Verloop.io","ES","₹25–42 LPA",25,42,3,"H","Bengaluru","https://verloop.io/careers/","Conversational-AI support SaaS. NLP bots, automation platform.","GD"],
+["Bewakoof","IU","₹24–40 LPA",24,40,3,"H","Mumbai","https://www.bewakoof.com/careers","D2C-fashion brand (IvyCap). e-commerce, supply-chain, martech.","GD"],
+["Mswipe","BF","₹24–40 LPA",24,40,3,"H","Mumbai","https://www.mswipe.com/careers","Merchant-payments fintech (Falcon/B Capital). POS + payments infra.","GD"],
+["GreyOrange","SC","₹28–50 LPA",28,50,3,"H","Gurugram","https://www.greyorange.com/careers/","Warehouse-robotics unicorn (Blume/Tiger). Robotics, embedded, fulfilment automation.","GD"],
+["Stanza Living","IU","₹24–42 LPA",24,42,3,"H","Gurugram","https://www.stanzaliving.com/careers","Co-living unicorn (Matrix/Accel). Ops platform, booking, IoT for living spaces.","GD"],
+["DealShare","IU","₹24–42 LPA",24,42,3,"H","Bengaluru","https://dealshare.in/careers","Social-commerce unicorn (Tiger/Matrix). Group-buying, supply-chain, vernacular commerce.","GD"],
+["Turtlemint","BF","₹26–46 LPA",26,46,3,"H","Mumbai","https://www.turtlemint.com/careers/","Insurtech unicorn (Nexus/Blume). Insurance-distribution platform, advisor tools.","GD"],
+["Jumbotail","IU","₹26–46 LPA",26,46,3,"H","Bengaluru","https://www.jumbotail.com/careers","B2B grocery-marketplace unicorn (Nexus). Supply-chain, fintech, commerce at scale.","GD"],
+["Rupeek","BF","₹26–46 LPA",26,46,3,"H","Bengaluru","https://rupeek.com/careers","Gold-loan fintech unicorn (Sequoia/Bertelsmann). Lending platform, logistics.","GD"],
+["Pratilipi","IU","₹25–44 LPA",25,44,3,"H","Bengaluru","https://pratilipi.com/careers","Vernacular-storytelling unicorn (Nexus/Omidyar). Content platform at scale, ML.","GD"],
+["Bijak","IU","₹24–42 LPA",24,42,3,"H","Gurugram","https://www.bijak.in/careers","Agri-commerce platform (Sequoia/RTP). B2B trading, supply-chain, credit.","GD"],
+["Animall","IU","₹24–42 LPA",24,42,3,"H","Gurugram","https://animall.in/","Cattle-trading platform (Nexus/SIG). Vernacular marketplace, ML matching.","BL"],
+["Jai Kisan","BF","₹24–42 LPA",24,42,3,"H","Mumbai","https://www.jai-kisan.com/careers","Rural-fintech (Blume/NABVENTURES). Agri-lending platform, credit underwriting.","GD"],
+["FamPay","BF","₹26–46 LPA",26,46,3,"H","Bengaluru","https://fampay.in/careers","Teen-fintech (Elevation/Sequoia). Payments + cards for teens, modern stack.","GD"],
+["Zolve","BF","₹28–50 LPA",28,50,3,"H","Bengaluru","https://www.zolve.com/careers","Cross-border-neobank (Accel/Lightspeed). US-banking for migrants, fintech infra.","GD"],
+["Karbon Card","BF","₹26–46 LPA",26,46,3,"H","Bengaluru","https://www.karboncard.com/careers","Corporate-cards fintech (Olive/Mastercard). Spend-mgmt, B2B fintech infra.","GD"],
+["Vymo","ES","₹26–46 LPA",26,46,3,"H","Bengaluru","https://getvymo.com/careers/","Sales-engagement SaaS (Sequoia/Emergence). AI for financial-services sales.","GD"],
+["Drip Capital","BF","₹28–50 LPA",28,50,3,"H","Mumbai / Remote","https://www.dripcapital.com/en-in/careers","Trade-finance fintech (Accel/Sequoia). Cross-border lending, US+India teams.","GD"],
+["Netradyne","CD","₹30–55 LPA",30,55,3,"H","Bengaluru","https://www.netradyne.com/company/careers","Fleet-safety AI (Point72/SoftBank). Edge CV/ML, driver-safety at scale.","GD"],
+["Cropin","CD","₹25–44 LPA",25,44,3,"H","Bengaluru","https://www.cropin.com/careers","Agritech-SaaS (Chiratae/ABB). Farm-intelligence ML, satellite + IoT data.","GD"],
+["Tonbo Imaging","SC","₹26–46 LPA",26,46,3,"H","Bengaluru","https://www.tonbosystems.com/careers","Defense-imaging deep-tech (Artiman). CV, embedded, optics for defense.","BL"],
+["Detect Technologies","CD","₹25–44 LPA",25,44,3,"H","Chennai","https://detecttechnologies.com/careers/","Industrial-AI deep-tech (Accel/Bharat). CV/ML for industrial safety + inspection.","GD"],
+["Ushur","ES","₹28–50 LPA",28,50,4,"W","Remote / Bengaluru","https://ushur.com/careers/","Customer-experience-automation SaaS (Iron Pillar). AI workflows, remote-friendly.","GD"],
+["Acko","BF","₹28–50 LPA",28,50,3,"H","Bengaluru","https://www.acko.com/careers/","Digital-insurance unicorn (Accel/General Atlantic). Insurtech platform at scale.","GD"],
+["NoBroker","IU","₹26–48 LPA",26,48,3,"H","Bengaluru","https://www.nobroker.in/careers","Proptech unicorn (Tiger/General Atlantic). Real-estate platform, payments, ML.","GD"],
+["Pixis","CD","₹28–50 LPA",28,50,3,"H","Remote / Bengaluru","https://pixis.ai/careers","Codeless-AI for marketing unicorn (SoftBank/General Atlantic). ML, remote-friendly.","GD"],
+["Spyne","CD","₹26–46 LPA",26,46,3,"H","Gurugram","https://www.spyne.ai/careers","AI-visual-content startup (Accel). Generative CV/ML for auto + e-commerce.","GD"],
+["Mindtickle","ES","₹28–50 LPA",28,50,3,"H","Pune / Remote","https://www.mindtickle.com/careers/","Sales-readiness SaaS unicorn (SoftBank/NEA). AI-coaching, remote-friendly.","GD"],
+["Entropik","CD","₹26–46 LPA",26,46,3,"H","Bengaluru","https://www.entropik.io/careers","Emotion-AI startup (SIG/Bessemer). CV/ML for user-research at scale.","GD"],
+["Nanonets","CD","₹30–52 LPA",30,52,4,"W","Remote / SF","https://nanonets.com/careers","(YC) Document-AI startup. OCR/ML, remote-first, global team incl. India.","GD"],
+["Skan.ai","CD","₹28–50 LPA",28,50,3,"H","Bengaluru","https://www.skan.ai/careers","Process-intelligence AI (Dell/Bessemer). CV-based process mining, ML.","GD"],
+["Toplyne","ES","₹28–48 LPA",28,48,4,"W","Remote / Bengaluru","https://www.toplyne.io/careers","(Sequoia/Tiger) Go-to-market AI SaaS. Remote-first, product-led ML.","GD"],
+["Bobble AI","CD","₹25–44 LPA",25,44,3,"H","Gurugram","https://bobble.ai/careers","Conversational-media AI (Xiaomi/Falcon). Keyboard AI, NLP at scale.","GD"],
+["Kapture CX","ES","₹24–42 LPA",24,42,3,"H","Bengaluru","https://www.kapture.cx/careers","Customer-support SaaS (India-focused). CRM + AI automation platform.","GD"],
+["SirionLabs","ES","₹28–50 LPA",28,50,3,"H","Gurugram / Remote","https://www.sirion.ai/company/careers/","Contract-lifecycle-mgmt AI unicorn (Tiger/Avatar). NLP/ML, remote-friendly.","GD"],
+["Icertis","ES","₹28–52 LPA",28,52,3,"H","Pune / Remote","https://www.icertis.com/company/careers/","Contract-management SaaS unicorn (B Capital/SoftBank). AI-CLM at scale.","GD"],
+["Vahan","CD","₹26–46 LPA",26,46,4,"W","Remote / Bengaluru","https://vahan.co/careers","(Khosla/Airtel) AI-recruitment for blue-collar. ML matching, remote-friendly.","GD"],
+["Crio.do","ES","₹25–42 LPA",25,42,3,"H","Bengaluru","https://crio.do/careers/","Developer-upskilling platform (Elevation). Hands-on learning infra.","GD"],
+["Mintifi","BF","₹26–46 LPA",26,46,3,"H","Mumbai","https://www.mintifi.com/careers","Supply-chain-finance fintech (Premji/Norwest). B2B lending platform.","GD"],
+["FlexiLoans","BF","₹25–44 LPA",25,44,3,"H","Mumbai","https://flexiloans.com/careers","SME-lending fintech (Fasanara/Maj). Digital underwriting, credit ML.","GD"],
+["Indifi","BF","₹25–42 LPA",25,42,3,"H","Gurugram","https://www.indifi.com/careers","SME-lending fintech (Accel/Elevation). Embedded-credit platform.","GD"],
+["Aye Finance","BF","₹24–42 LPA",24,42,3,"H","Gurugram","https://www.ayefin.com/careers/","MSME-lending fintech (Elevation/A91). Credit underwriting, risk ML.","GD"],
+["Wint Wealth","BF","₹26–46 LPA",26,46,3,"H","Bengaluru","https://www.wintwealth.com/careers/","Bonds-investment fintech (Pantomath/Jupiter). Fixed-income platform, modern stack.","GD"],
+["Stable Money","BF","₹26–46 LPA",26,46,3,"H","Bengaluru","https://www.stablemoney.in/","FD-investment fintech (Matrix/Lightspeed). Debt-investment platform, fast-growing.","BL"],
+["Jar","BF","₹26–46 LPA",26,46,3,"H","Bengaluru","https://www.myjar.app/","Gold-savings fintech (Tiger/Tribe). Micro-savings app at scale.","GD"],
+["GetVantage","BF","₹25–42 LPA",25,42,3,"H","Mumbai","https://getvantage.co/careers","Revenue-based-financing fintech (Chiratae/Varanium). Embedded-finance platform.","GD"],
+["Recur Club","BF","₹25–42 LPA",25,42,3,"H","Gurugram","https://www.recurclub.com/","Debt-marketplace fintech (Tiger/InfoEdge). Revenue-financing, modern stack.","BL"],
+["Klub","BF","₹24–42 LPA",24,42,3,"H","Bengaluru","https://klubworks.com/careers","Revenue-based-financing fintech (Sequoia/Alteria). Brand-financing platform.","GD"],
+["Velocity","BF","₹25–44 LPA",25,44,3,"H","Bengaluru","https://www.velocity.in/careers","Revenue-financing fintech (Valar/Peter Thiel). Embedded-credit for D2C.","GD"],
+["FundsIndia","BF","₹24–40 LPA",24,40,3,"H","Chennai","https://www.fundsindia.com/careers","Wealth-management platform (Faering/Premji). Mutual-funds + advisory at scale.","GD"],
+["Hyperface","BF","₹26–46 LPA",26,46,3,"H","Bengaluru","https://www.hyperface.co/careers","Card-issuing-as-a-service fintech (Kalaari). Embedded-cards platform.","GD"],
+["Smartsheet","FG","₹40–68 LPA",40,68,4,"W","Global Remote","https://www.smartsheet.com/careers","Work-mgmt SaaS (listed). Remote-friendly; verify India per-role. Platform eng.","LV"],
+["ServiceTitan","FG","₹42–70 LPA",42,70,3,"W","Global Remote","https://www.servicetitan.com/careers","Field-service SaaS (listed). Remote; verify India per-role. Strong eng + equity.","LV"],
+["Toast","FG","₹42–70 LPA",42,70,3,"W","Global Remote","https://careers.toasttab.com/","Restaurant-tech (listed). Remote; verify India per-role. Payments + POS infra.","LV"],
+["DocuSign","FG","₹40–68 LPA",40,68,4,"H","Remote / Bengaluru","https://careers.docusign.com/","e-Signature (listed). Has India team. Platform, security, cloud eng.","LV"],
+["LaunchDarkly","FG","₹45–75 LPA",45,75,4,"W","Global Remote","https://launchdarkly.com/careers/","Feature-flag infra (Bessemer). Remote; verify India per-role. Dev-tools, strong comp.","GD"],
+["Gong","FG","₹45–78 LPA",45,78,3,"W","Global Remote","https://www.gong.io/careers/","Revenue-intelligence unicorn (Sequoia/Coatue). Remote; verify India per-role. NLP/ML.","LV"],
+["Pendo","FG","₹40–68 LPA",40,68,4,"W","Global Remote","https://www.pendo.io/careers/","Product-analytics (Battery/Sapphire). Remote; verify India per-role. Data + eng.","GD"],
+["Gusto","FG","₹45–75 LPA",45,75,3,"W","Global Remote","https://gusto.com/about/careers","Payroll + HR unicorn (CapitalG/General Catalyst). Remote; verify India per-role.","LV"],
+["BetterUp","FG","₹40–68 LPA",40,68,4,"W","Global Remote","https://www.betterup.com/careers","Coaching-platform unicorn (ICONIQ/Lightspeed). Remote; verify India per-role.","GD"],
+["Mews","FG","₹38–65 LPA",38,65,4,"W","Remote / Prague","https://www.mews.com/en/careers","Hospitality-cloud unicorn (Goldman/Kinnevik). Remote; verify India per-role.","GD"],
+["Smartling","FG","₹38–62 LPA",38,62,4,"W","Global Remote","https://www.smartling.com/careers/","Translation-mgmt SaaS (Battery/ICONIQ). Remote; verify India per-role.","GD"],
+["JPMorgan Chase","BF","₹28–52 LPA",28,52,4,"H","Mumbai / Bengaluru / Hyderabad","https://careers.jpmorgan.com/","#7 LinkedIn Top Companies India. Huge tech org — trading systems, risk, platform, data. Strong comp + stability, good WLB.","LV"],
+["DTCC","BF","₹26–46 LPA",26,46,4,"H","Chennai / Hyderabad","https://www.dtcc.com/careers","Post-trade clearing + settlement (LinkedIn Top 25). Financial-infra at scale, security, platform eng. Stable, decent 3-YOE comp.","GD"],
+["Thomson Reuters","ES","₹25–42 LPA",25,42,4,"H","Bengaluru / Hyderabad","https://careers.thomsonreuters.com/","Legal/tax/news info-platform (LinkedIn Top 25). SE2/senior tiers clear 25L+. Content platforms, data, ML. Good WLB.","LV"],
+["Dolat Capital","HQ","₹40–70 LPA",40,70,3,"O","Mumbai","https://dolatcapital.com/career.html","Mumbai prop-trading. HFT systems in C++, algo strategies. Strong pay, smaller team.","BL"],
+["Quantbox Research","HQ","₹45–80 LPA",45,80,3,"O","Chennai / Singapore","https://www.quantbox.in/careers","Quant prop-trading (Chennai HQ). C++ low-latency, research infra. Top-tier India quant pay.","BL"],
+["Estee Advisors","HQ","₹35–60 LPA",35,60,3,"O","Gurugram","https://estee.ai/careers/","Algo-trading + quant asset-mgmt pioneer. Trading systems, ML strategies.","BL"],
+["APT Portfolio","HQ","₹40–70 LPA",40,70,3,"O","Delhi NCR","https://aptportfolio.com/","Delhi prop-trading. HFT infra, C++/FPGA, strong comp, low profile.","BL"],
+["Open Futures","HQ","₹35–60 LPA",35,60,3,"O","Delhi / Kolkata","https://www.openfutures.in/","Prop-trading group. Algo systems, market-making across exchanges.","BL"],
+["Nasdaq India","BF","₹28–50 LPA",28,50,4,"H","Bengaluru","https://www.nasdaq.com/about/careers","Exchange-tech GCC. Market-surveillance, trading systems, fintech platforms.","GD"],
+["ICE (NYSE)","BF","₹28–48 LPA",28,48,4,"H","Hyderabad","https://www.ice.com/careers","Intercontinental Exchange / NYSE tech centre. Exchange infra, data platforms.","GD"],
+["CME Group","BF","₹28–50 LPA",28,50,4,"H","Bengaluru","https://www.cmegroup.com/careers.html","World's largest derivatives exchange, India centre. Trading + clearing systems.","GD"],
+["Morningstar","BF","₹25–42 LPA",25,42,4,"H","Mumbai / Navi Mumbai","https://www.morningstar.com/company/careers","Investment-research platform GCC. Data platforms, analytics, fintech products.","GD"],
+["Fitch Group","BF","₹25–42 LPA",25,42,4,"H","Chennai / Mumbai","https://www.fitch.group/careers","Ratings + financial-data GCC. Data engineering, analytics platforms.","GD"],
+["JioStar (Disney+ Hotstar)","IU","₹30–55 LPA",30,55,3,"H","Bengaluru / Mumbai","https://careers.hotstar.com/","India's biggest streamer (IPL scale). SDE-2 median ₹33-35L verified. World-class live-streaming infra — 60M concurrent viewers.","LV"],
+["Sony LIV (SPNI)","IU","₹25–42 LPA",25,42,3,"H","Mumbai","https://www.sonypicturesnetworks.com/careers","Sony's India streamer. Video platform, personalization, payments at scale.","GD"],
+["Warner Bros. Discovery","GN","₹26–46 LPA",26,46,4,"H","Hyderabad / Bengaluru","https://careers.wbd.com/","Max/HBO tech GCC. Streaming platforms, content systems, data engineering.","GD"],
+["NBCUniversal","GN","₹26–46 LPA",26,46,4,"H","Bengaluru","https://www.nbcunicareers.com/","Peacock + media tech GCC. Streaming, ad-tech, content platforms.","GD"],
+["Zee Entertainment (Zee5)","IU","₹24–40 LPA",24,40,3,"H","Mumbai / Bengaluru","https://www.zeecareers.com/","Zee5 streaming + media tech. Video platform, recommendation systems.","GD"],
+["Check Point","CY","₹28–48 LPA",28,48,4,"H","Bengaluru","https://careers.checkpoint.com/","Israeli security firm, India R&D. Network + cloud security products.","GD"],
+["Qualys","CY","₹26–46 LPA",26,46,4,"H","Pune","https://www.qualys.com/careers/","Vulnerability-mgmt platform. Pune R&D centre, cloud-security eng.","GD"],
+["Rapid7","CY","₹28–48 LPA",28,48,4,"H","Pune","https://careers.rapid7.com/","Security-analytics platform. India product eng, detection + response.","GD"],
+["Netskope","CY","₹32–55 LPA",32,55,4,"H","Bengaluru","https://www.netskope.com/company/careers","SASE/cloud-security unicorn. Strong India eng centre, good comp.","GD"],
+["Trellix","CY","₹26–45 LPA",26,45,4,"H","Bengaluru","https://careers.trellix.com/","XDR security (McAfee+FireEye). Detection eng, India R&D.","GD"],
+["Trend Micro","CY","₹25–42 LPA",25,42,4,"H","Bengaluru","https://www.trendmicro.com/en_us/about/careers.html","Cloud + endpoint security. India eng centre.","GD"],
+["SonicWall / Sophos","CY","₹25–42 LPA",25,42,4,"H","Bengaluru","https://www.sophos.com/en-us/company/careers","Network-security firms with India R&D. Firewall + endpoint eng.","GD"],
+["Allianz Technology","BF","₹25–44 LPA",25,44,4,"H","Pune","https://careers.allianz.com/","German insurer's global tech hub. Platform, data, cloud eng. Strong WLB.","GD"],
+["Swiss Re","BF","₹28–48 LPA",28,48,4,"H","Bengaluru","https://careers.swissre.com/","Reinsurance giant's tech centre. Risk-analytics, data platforms, cat-modeling.","GD"],
+["Chubb","BF","₹26–45 LPA",26,45,4,"H","Hyderabad / Bengaluru","https://careers.chubb.com/","US insurer's India tech centres. Digital-insurance platforms, data eng.","GD"],
+["Allstate India","BF","₹25–44 LPA",25,44,4,"H","Bengaluru / Pune","https://www.allstateindia.com/","US insurer GCC. Claims platforms, data science, cloud eng. Good WLB.","GD"],
+["Liberty Mutual (Solaria Labs)","BF","₹26–45 LPA",26,45,4,"H","Bengaluru","https://jobs.libertymutualgroup.com/","US insurer tech GCC. Insurance platforms, data + ML.","GD"],
+["Travelers India","BF","₹25–44 LPA",25,44,4,"H","Hyderabad / Bengaluru","https://careers.travelers.com/","US P&C insurer GCC. Claims tech, data engineering, ML.","GD"],
+["MetLife (GOSC)","BF","₹25–42 LPA",25,42,4,"H","Noida / Hyderabad","https://www.metlife.com/careers/","US insurer global-ops centre. Digital platforms, data eng.","GD"],
+["Prudential (Pramerica)","BF","₹25–42 LPA",25,42,4,"H","Noida","https://www.prudential.com/careers","US insurer tech centre. Retirement + insurance platforms.","GD"],
+["Munich Re","BF","₹26–46 LPA",26,46,4,"H","Bengaluru / Mumbai","https://www.munichre.com/en/careers","Reinsurance tech centre. Risk-modeling, data platforms, IoT insurance.","GD"],
+["AXA Global Business Services","BF","₹24–42 LPA",24,42,4,"H","Bengaluru / Pune","https://careers.axa.com/","French insurer GCC. Digital platforms, data, cloud.","GD"],
+["Zurich (Cover-More Tech)","BF","₹24–42 LPA",24,42,4,"H","Bengaluru","https://www.zurich.com/careers","Swiss insurer tech ops. Insurance platforms, integrations.","GD"],
+["Manulife","BF","₹25–44 LPA",25,44,4,"H","Bengaluru","https://careers.manulife.com/","Canadian insurer GCC. Wealth + insurance platforms, data eng.","GD"],
+["Sun Life (ASC India)","BF","₹25–42 LPA",25,42,4,"H","Gurugram / Bengaluru","https://www.sunlife.com/en/careers/","Canadian insurer GCC. Digital-insurance eng, cloud, data.","GD"],
+["Novartis (NBS Hyderabad)","HT","₹26–46 LPA",26,46,4,"H","Hyderabad","https://www.novartis.com/careers","Swiss pharma's biggest global centre. Data science, digital-health platforms, ML for drug discovery.","GD"],
+["Roche India (GCS)","HT","₹26–46 LPA",26,46,4,"H","Pune / Hyderabad","https://careers.roche.com/","Swiss pharma tech centre. Diagnostics software, health data platforms.","GD"],
+["Eli Lilly (LCCI)","HT","₹28–50 LPA",28,50,4,"H","Bengaluru / Hyderabad","https://careers.lilly.com/","US pharma capability centre. Clinical-data eng, ML, digital health. Strong comp.","GD"],
+["Merck (MSD IT Hub)","HT","₹26–46 LPA",26,46,4,"H","Pune / Hyderabad","https://jobs.merck.com/","US pharma IT hub. Clinical platforms, data engineering, AI.","GD"],
+["Bristol Myers Squibb","HT","₹28–48 LPA",28,48,4,"H","Hyderabad","https://careers.bms.com/","US pharma's Hyderabad hub (5000+). Drug-discovery informatics, data eng, ML.","GD"],
+["Sanofi (Hyderabad Hub)","HT","₹25–44 LPA",25,44,4,"H","Hyderabad","https://jobs.sanofi.com/","French pharma digital hub. Health platforms, data science.","GD"],
+["GSK Tech Centre","HT","₹25–44 LPA",25,44,4,"H","Bengaluru","https://jobs.gsk.com/","UK pharma tech centre. R&D informatics, data platforms.","GD"],
+["Bayer (Digital Hub)","HT","₹25–44 LPA",25,44,4,"H","Bengaluru","https://www.bayer.com/en/careers","German pharma+agri digital hub. Crop-science ML, health data eng.","GD"],
+["Amgen India","HT","₹28–50 LPA",28,50,4,"H","Hyderabad","https://careers.amgen.com/","US biotech's new India hub (3000+ planned). Biologics informatics, data, AI. Strong comp.","GD"],
+["Thermo Fisher","HT","₹25–44 LPA",25,44,4,"H","Bengaluru / Hyderabad","https://jobs.thermofisher.com/","Lab-tech giant GCC. Instrument software, LIMS, data platforms.","GD"],
+["Medtronic (MEIC)","HT","₹26–46 LPA",26,46,4,"H","Hyderabad","https://www.medtronic.com/careers","Medical-device giant's eng centre. Device software, embedded, health data.","GD"],
+["Boston Scientific","HT","₹25–44 LPA",25,44,4,"H","Pune","https://www.bostonscientific.com/careers","MedTech GCC. Device software, embedded, digital health.","GD"],
+["Stryker (Global Tech Centre)","HT","₹25–44 LPA",25,44,4,"H","Gurugram","https://careers.stryker.com/","MedTech R&D centre. Surgical-robotics software, embedded, imaging.","GD"],
+["Abbott (Tech Centre)","HT","₹24–42 LPA",24,42,4,"H","Mumbai / Bengaluru","https://www.abbott.com/careers.html","Healthcare giant. Device software, diagnostics platforms.","GD"],
+["Siemens Technology India","SC","₹25–45 LPA",25,45,4,"H","Bengaluru / Pune","https://www.siemens.com/in/en/company/jobs.html","German industrial giant's R&D. Industrial-IoT, automation software, digital twin.","GD"],
+["ABB India (GBS)","SC","₹24–42 LPA",24,42,4,"H","Bengaluru","https://global.abb/group/en/careers","Swiss industrial-automation GCC. Robotics software, electrification platforms.","GD"],
+["Schneider Electric","SC","₹25–44 LPA",25,44,4,"H","Bengaluru","https://www.se.com/in/en/about-us/careers/","Energy-mgmt giant. IoT platforms (EcoStruxure), embedded, cloud.","GD"],
+["Emerson","SC","₹24–42 LPA",24,42,4,"H","Pune / Chennai","https://www.emerson.com/en-us/careers","US automation giant. Industrial software, embedded, IoT.","GD"],
+["Rockwell Automation","SC","₹25–44 LPA",25,44,4,"H","Pune / Bengaluru","https://www.rockwellautomation.com/en-us/company/careers.html","Industrial-automation GCC. PLC software, IIoT platforms.","GD"],
+["Eaton","SC","₹24–42 LPA",24,42,4,"H","Pune","https://www.eaton.com/us/en-us/company/careers.html","Power-mgmt GCC. Embedded, IoT, energy software.","GD"],
+["Baker Hughes","SC","₹25–44 LPA",25,44,4,"H","Bengaluru / Mumbai","https://careers.bakerhughes.com/","Energy-tech GCC. Industrial-AI, turbomachinery software, IoT.","GD"],
+["Halliburton (HTC)","SC","₹25–45 LPA",25,45,4,"H","Bengaluru / Pune","https://jobs.halliburton.com/","Oilfield-tech centre. Simulation, subsurface software, HPC.","GD"],
+["Shell (STCB)","SC","₹28–50 LPA",28,50,4,"H","Bengaluru","https://www.shell.in/careers.html","Shell Technology Centre Bengaluru. Energy-transition software, data, HPC. Strong comp + WLB.","GD"],
+["bp (TSI)","SC","₹26–46 LPA",26,46,4,"H","Pune","https://www.bp.com/en/global/corporate/careers.html","bp Technical Solutions India. Energy platforms, data engineering.","GD"],
+["ExxonMobil (Tech Centre)","SC","₹26–48 LPA",26,48,4,"H","Bengaluru","https://corporate.exxonmobil.com/careers","US energy giant's India tech centre. Engineering computing, data, simulation.","GD"],
+["GE Vernova","SC","₹25–44 LPA",25,44,4,"H","Bengaluru / Hyderabad","https://www.gevernova.com/careers","Energy-tech spinoff. Grid software, renewables platforms, industrial IoT.","GD"],
+["Harman (Samsung)","SC","₹26–46 LPA",26,46,4,"H","Bengaluru / Pune","https://jobs.harman.com/","Connected-car + audio tech (Samsung). Infotainment, automotive cloud, embedded. Large India R&D.","GD"],
+["Aptiv","SC","₹25–44 LPA",25,44,4,"H","Bengaluru","https://www.aptiv.com/en/careers","Auto-tech (ex-Delphi). ADAS, autonomous software, vehicle architecture.","GD"],
+["Visteon","SC","₹25–44 LPA",25,44,4,"H","Chennai / Pune","https://www.visteon.com/company/careers/","Cockpit-electronics leader. Digital clusters, infotainment, embedded. Chennai R&D.","GD"],
+["Magna (Engineering Centre)","SC","₹24–42 LPA",24,42,4,"H","Bengaluru / Pune","https://www.magna.com/company/careers","Auto-supplier R&D. ADAS software, embedded, mechatronics.","GD"],
+["Valeo India","SC","₹24–42 LPA",24,42,4,"H","Chennai","https://www.valeo.com/en/join-us/","French auto-supplier R&D. ADAS, embedded vision, electrification.","GD"],
+["Hyundai Mobis","SC","₹25–44 LPA",25,44,4,"H","Hyderabad","https://en.mobis.co.kr/recruit/main.do","Korean auto-parts giant's India R&D. Autonomous, infotainment, embedded.","GD"],
+["Renault Nissan Tech (RNTBCI)","SC","₹24–42 LPA",24,42,4,"H","Chennai","https://www.rntbci.in/careers","Alliance tech centre. Vehicle software, connected-car, data.","GD"],
+["Volkswagen ITS India","SC","₹25–44 LPA",25,44,4,"H","Pune","https://www.vwits.in/careers","VW Group IT services. Auto-cloud, connected-vehicle platforms, SAP.","GD"],
+["Stellantis (ICT India)","SC","₹24–42 LPA",24,42,4,"H","Hyderabad / Chennai","https://www.stellantis.com/en/careers","Jeep/Fiat/Peugeot tech centre. Connected-car software, embedded.","GD"],
+["Boeing India (BIETC)","SC","₹26–48 LPA",26,48,4,"H","Bengaluru / Chennai","https://jobs.boeing.com/","Boeing's largest centre outside US. Avionics software, simulation, aero data platforms.","GD"],
+["Airbus India","SC","₹26–48 LPA",26,48,4,"H","Bengaluru","https://www.airbus.com/en/careers","Airbus digital + eng centre. Flight software, simulation, data analytics.","GD"],
+["Collins Aerospace","SC","₹25–45 LPA",25,45,4,"H","Hyderabad / Bengaluru","https://careers.rtx.com/","RTX avionics arm. Embedded avionics, certification software, systems.","GD"],
+["Pratt & Whitney (RTX)","SC","₹25–45 LPA",25,45,4,"H","Bengaluru","https://careers.rtx.com/","Jet-engine maker's India centre. Engine software, data analytics, simulation.","GD"],
+["Safran Engineering","SC","₹24–42 LPA",24,42,4,"H","Bengaluru","https://www.safran-group.com/careers","French aero-supplier R&D. Avionics, embedded, systems engineering.","GD"],
+["Thales India","SC","₹25–44 LPA",25,44,4,"H","Noida / Bengaluru","https://www.thalesgroup.com/en/career","French defense-aero tech. Avionics, defense software, cybersecurity.","GD"],
+["Rolls-Royce India","SC","₹25–45 LPA",25,45,4,"H","Bengaluru","https://careers.rolls-royce.com/","Aero-engine R&D centre. Engine-health monitoring, data platforms, simulation.","GD"],
+["Amadeus Labs","GN","₹25–44 LPA",25,44,4,"H","Bengaluru","https://amadeus.com/en/careers","Global travel-tech giant's India lab. Airline IT, booking systems, cloud.","GD"],
+["Sabre (GCC)","GN","₹25–42 LPA",25,42,4,"H","Bengaluru","https://www.sabre.com/careers/","Travel-tech GCC. Airline + hospitality platforms, distribution systems.","GD"],
+["Cleartrip (Flipkart)","IU","₹25–44 LPA",25,44,3,"H","Bengaluru","https://careers.cleartrip.com/","Flipkart-owned OTA. Booking platform, pricing, travel infra.","GD"],
+["ixigo","IU","₹24–40 LPA",24,40,3,"H","Gurugram","https://www.ixigo.com/careers","Listed travel app (trains/flights). AI trip-planning, consumer scale.","GD"],
+["Redis","CD","₹35–60 LPA",35,60,4,"W","Remote / Bengaluru","https://redis.io/careers/","In-memory DB company. Remote-friendly, India team. Database internals, cloud eng.","GD"],
+["Couchbase","CD","₹30–52 LPA",30,52,4,"H","Bengaluru","https://www.couchbase.com/careers/","NoSQL DB company. India R&D centre, distributed-systems eng.","GD"],
+["Aerospike","CD","₹32–55 LPA",32,55,4,"H","Bengaluru","https://aerospike.com/company/careers/","Real-time NoSQL DB. Bengaluru R&D, low-latency systems eng.","GD"],
+["DataStax (IBM)","CD","₹30–52 LPA",30,52,4,"W","Remote / Bengaluru","https://www.datastax.com/company/careers","Cassandra company (now IBM). Distributed-DB eng, remote-friendly.","GD"],
+["Teradata","CD","₹26–46 LPA",26,46,4,"H","Hyderabad / Pune","https://careers.teradata.com/","Enterprise-analytics DB. Cloud data-platform eng, India R&D.","GD"],
+["Informatica","CD","₹26–46 LPA",26,46,4,"H","Bengaluru / Hyderabad","https://www.informatica.com/in/company/careers.html","Data-integration leader. iPaaS platform eng, large India R&D.","GD"],
+["Qlik","CD","₹25–44 LPA",25,44,4,"H","Bengaluru","https://www.qlik.com/us/company/careers","BI + analytics platform. Data-viz eng, India centre.","GD"],
+["Alteryx","CD","₹26–46 LPA",26,46,4,"H","Bengaluru","https://www.alteryx.com/careers","Analytics-automation platform. Data-pipeline eng, India centre.","GD"],
+["JFrog","CD","₹30–52 LPA",30,52,4,"H","Bengaluru","https://join.jfrog.com/","DevOps artifact platform (Artifactory). India R&D, strong dev-tools eng.","GD"],
+["Sumo Logic","CD","₹28–48 LPA",28,48,4,"H","Noida / Bengaluru","https://www.sumologic.com/careers/","Cloud-SIEM + observability. Log-analytics eng, India centre.","GD"],
+["JetBrains","FG","₹40–70 LPA",40,70,4,"W","Global Remote","https://www.jetbrains.com/careers/","IntelliJ/Kotlin maker. Remote-friendly; verify India per-role. World-class dev-tools eng.","GD"],
+["Sourcegraph","FG","₹45–75 LPA",45,75,4,"W","Global Remote","https://sourcegraph.com/jobs","Code-search + AI coding (Cody). All-remote, hires globally. Dev-tools + AI eng.","GD"],
+["ADP India","ES","₹25–44 LPA",25,44,4,"H","Hyderabad / Pune","https://jobs.adp.com/","Payroll giant's GCC (10k+ India). HR platforms, payments eng. Stable, good WLB.","GD"],
+["UKG","ES","₹26–46 LPA",26,46,4,"H","Noida / Pune","https://www.ukg.com/about-us/careers","Workforce-mgmt giant (Kronos+Ultimate). HR-tech eng, India R&D.","GD"],
+["Zendesk","ES","₹32–55 LPA",32,55,4,"H","Remote / Pune","https://jobs.zendesk.com/","Customer-support platform. India remote roles growing, CX-platform eng.","GD"],
+["Klaviyo","FG","₹40–65 LPA",40,65,4,"W","Global Remote","https://careers.klaviyo.com/","Marketing-automation (listed). Remote; verify India per-role. Data + email infra at scale.","GD"],
+["BigCommerce","FG","₹35–58 LPA",35,58,4,"W","Global Remote","https://careers.bigcommerce.com/","E-commerce platform. Remote-friendly; verify India per-role.","GD"],
+["Intercom","FG","₹40–68 LPA",40,68,4,"W","Remote / Dublin","https://www.intercom.com/careers","Customer-messaging + AI (Fin). Remote; verify India per-role. Strong product eng.","GD"],
+["Electronic Arts (EA)","IU","₹28–50 LPA",28,50,4,"H","Hyderabad / Bengaluru","https://careers.ea.com/","EA India (3000+). Game engineering, mobile, live services. FIFA/Apex infra. Good comp + WLB.","GD"],
+["Ubisoft India","IU","₹25–42 LPA",25,42,4,"H","Pune / Mumbai","https://www.ubisoft.com/en-us/company/careers","AAA game studios (Pune/Mumbai). Game programming, engine, tools.","GD"],
+["Unity Technologies","FG","₹30–52 LPA",30,52,4,"H","Remote / Bengaluru","https://careers.unity.com/","Game-engine leader. India roles + remote. Engine eng, cloud services.","GD"],
+["Krafton India","IU","₹28–50 LPA",28,50,3,"H","Bengaluru","https://krafton.com/en/careers/","BGMI maker's India studio + investments. Game backend, live-ops at massive scale.","GD"],
+["Zynga India (Take-Two)","IU","₹28–48 LPA",28,48,4,"H","Bengaluru","https://www.zynga.com/careers/","Mobile-gaming studio (1500+ India). Game eng, live services, data.","GD"],
+["Scopely","IU","₹28–48 LPA",28,48,4,"H","Bengaluru","https://scopely.com/careers","Mobile-gaming unicorn (Monopoly GO). India studio, game backend eng.","GD"],
+["Grab","FG","₹35–60 LPA",35,60,3,"H","Bengaluru / Singapore","https://grab.careers/","SEA super-app's India tech centre (Bengaluru). Payments, maps, ML at scale. Strong comp.","LV"],
+["Rakuten India","FG","₹28–50 LPA",28,50,4,"H","Bengaluru","https://rakuten.careers/","Japanese e-commerce giant's India centre. Commerce platforms, fintech, ML.","GD"],
+["Careem (Uber)","FG","₹30–52 LPA",30,52,4,"W","Remote / Dubai","https://www.careem.com/careers","Middle-East super-app. Remote-friendly eng; verify India per-role.","GD"],
+["McKinsey (QuantumBlack)","CD","₹35–60 LPA",35,60,3,"H","Bengaluru / Gurugram","https://www.mckinsey.com/careers","McKinsey's AI arm. ML engineering, data science for Fortune-100. Strong comp, consulting pace.","LV"],
+["BCG X","CD","₹35–55 LPA",35,55,3,"H","Bengaluru / Delhi","https://careers.bcg.com/x","BCG's tech build unit. Full-stack + ML eng, product incubation. Strong comp.","LV"],
+["ZS Associates","CD","₹25–42 LPA",25,42,3,"H","Pune / Gurugram","https://www.zs.com/careers","Analytics consulting. Data eng, ML for pharma clients. Decent comp, structured growth.","GD"],
+["Affirm","FG","₹45–75 LPA",45,75,4,"W","Global Remote","https://www.affirm.com/careers","BNPL leader (listed). Remote-first; verify India per-role. Fintech infra, strong comp.","LV"],
+["Klarna","FG","₹38–62 LPA",38,62,3,"W","Remote / Stockholm","https://www.klarna.com/careers/","BNPL giant. Remote-friendly; verify India per-role. AI-heavy fintech eng.","GD"],
+["Payoneer","FG","₹28–48 LPA",28,48,4,"H","Remote / Bengaluru","https://www.payoneer.com/careers/","Cross-border payments (listed). India presence, payments infra.","GD"],
+["Remitly","FG","₹30–52 LPA",30,52,4,"W","Remote / Seattle","https://www.remitly.com/us/en/careers","Remittances (listed). Remote-friendly; verify India per-role. Payments eng.","GD"],
+
+];
+
+const seen=new Set();
+const DATA=D.filter(r=>{if(seen.has(r[0]))return false;seen.add(r[0]);return true;});
+const allCats=[...new Set(DATA.map(r=>CM[r[1]]||r[1]))].sort();
+let activeCat="All",expandedRow=null;
+
+function wlbHTML(n){
+  let dots='<span class="wlb-dots">';
+  for(let i=1;i<=5;i++)dots+='<span class="wd'+(i<=n?' on':'')+'"></span>';
+  return dots+'</span><span class="wlb-lbl">'+WL[n]+'</span>';
+}
+function mc(m){return m==="WFH"?"bwfh":m==="WFO"?"bwfo":"bhyb";}
+
+function render(){
+  const q=document.getElementById('q').value.toLowerCase();
+  const mod=document.getElementById('mod').value;
+  const srt=document.getElementById('srt').value;
+  const minP=parseInt(document.getElementById('minp').value);
+  let list=DATA.filter(r=>{
+    const cat=CM[r[1]]||r[1];
+    const mode=MM[r[6]]||r[6];
+    if(activeCat!=='All'&&cat!==activeCat)return false;
+    if(mod&&mode!==mod)return false;
+    if(r[3]<minP)return false;
+    if(q&&!r[0].toLowerCase().includes(q)&&!(r[7]||'').toLowerCase().includes(q)&&!cat.toLowerCase().includes(q)&&!(r[9]||'').toLowerCase().includes(q))return false;
+    return true;
+  });
+  if(srt==='lo')list.sort((a,b)=>b[3]-a[3]);
+  else if(srt==='hi')list.sort((a,b)=>b[4]-a[4]);
+  else if(srt==='wlb')list.sort((a,b)=>b[5]-a[5]);
+  else list.sort((a,b)=>a[0].localeCompare(b[0]));
+
+  document.getElementById('rc').textContent=list.length+' companies';
+  document.getElementById('nodata').style.display=list.length?'none':'block';
+  document.getElementById('tbl').style.display=list.length?'':'none';
+
+  document.getElementById('tbody').innerHTML=list.map(r=>{
+    const mode=MM[r[6]]||r[6];
+    const isOpen=expandedRow===r[0];
+    const key='status_'+r[0];
+    const sv=localStorage.getItem(key)||'';
+    const opt=(v,l)=>'<option value="'+v+'"'+(sv===v?' selected':'')+'>'+l+'</option>';
+    const dd='<select class="status-sel" onclick="event.stopPropagation()" onchange="saveStatus(event,\''+r[0].replace(/'/g,"\\'")+'\')">'+'<option value="">&#8212; pick status &#8212;</option>'+opt('applied','&#9989; Applied')+opt('referral','&#129309; Asked for referral')+opt('no_openings','&#10060; No openings')+opt('pending','&#9203; Pending')+'</select>';
+    return '<tr class="data-row'+(isOpen?' open':'')+'" onclick="rowClick(event,\''+r[0].replace(/'/g,"\\'")+'\')">'
+      +'<td class="co-name">'+r[0]+'</td>'
+      +'<td><span class="pay">'+r[2]+'</span></td>'
+      +'<td><span class="badge '+mc(mode)+'">'+ mode+'</span></td>'
+      +'<td><button class="apply-link" onclick="openCareer(event,\''+r[8].replace(/'/g,"\\'")+'\')" type="button">Careers ↗</button></td>'
+      +'<td>'+dd+'</td>'
+      +'<td><span class="src-badge s'+r[10]+'">'+r[10]+'</span></td>'
+      +'</tr>'
+      +(isOpen?'<tr class="exp-row"><td colspan="6">'+r[9]+'</td></tr>':'');
+  }).join('');
+
+  const highPay=DATA.filter(r=>r[3]>=60).length;
+  const wfhCount=DATA.filter(r=>MM[r[6]]==='WFH'&&r[3]>=minP).length;
+  document.getElementById('stats-row').innerHTML=
+    '<div class="stat"><div class="stat-n green">'+DATA.length+'</div><div class="stat-l">Total companies</div></div>'
+    +'<div class="stat"><div class="stat-n blue">'+highPay+'</div><div class="stat-l">Pay 60+ LPA</div></div>'
+    +'<div class="stat"><div class="stat-n">'+wfhCount+'</div><div class="stat-l">WFH options</div></div>'
+    +'<div class="stat"><div class="stat-n">'+list.length+'</div><div class="stat-l">Matching now</div></div>';
+}
+
+function openCareer(e,url){e.stopPropagation();window.open(url,'_blank','noopener,noreferrer');}
+function rowClick(e,name){if(e.target.closest('button')||e.target.closest('a')||e.target.closest('select')||e.target.tagName==='OPTION')return;expandedRow=expandedRow===name?null:name;render();}
+function saveStatus(e,name){e.stopPropagation();const v=e.target.value;if(v)localStorage.setItem('status_'+name,v);else localStorage.removeItem('status_'+name);}
+
+function buildPills(){
+  document.getElementById('pills').innerHTML=
+    ['All',...allCats].map(c=>'<button class="pill'+(c===activeCat?' on':'')+'\" onclick="setCat(\''+c.replace(/'/g,"\\'")+'\')">'+(CM[c]||c)+'</button>').join('');
+}
+function setCat(c){activeCat=c;buildPills();render();}
+
+buildPills();
+render();
+
+// ── TODO SECTION ──────────────────────────────────────
+let todos = [];
+try { todos = JSON.parse(localStorage.getItem('todos_v1') || '[]'); } catch(e) { todos = []; }
+
+function saveTodos() { localStorage.setItem('todos_v1', JSON.stringify(todos)); }
+
+function renderTodos() {
+  const list = document.getElementById('todo-list');
+  const count = document.getElementById('todo-count');
+  const doneCount = document.getElementById('todo-done-count');
+  if (!list) return;
+  const done = todos.filter(t => t.done).length;
+  count.textContent = todos.length;
+  doneCount.textContent = done + ' done';
+  if (!todos.length) {
+    list.innerHTML = '<div class="todo-empty">No todos yet.<br>Add one above!</div>';
+    return;
+  }
+  list.innerHTML = todos.map((t, i) =>
+    '<div class="todo-item' + (t.done ? ' done' : '') + '">'
+    + '<input type="checkbox"' + (t.done ? ' checked' : '') + ' onchange="toggleTodo(' + i + ')" onclick="event.stopPropagation()">'
+    + '<span class="todo-text">' + t.text.replace(/</g,'&lt;').replace(/>/g,'&gt;') + '</span>'
+    + '<button class="del-btn" onclick="deleteTodo(' + i + ')" title="Delete">×</button>'
+    + '</div>'
+  ).join('');
+}
+
+function addTodo() {
+  const inp = document.getElementById('todo-input');
+  const text = inp.value.trim();
+  if (!text) return;
+  todos.unshift({ text, done: false, id: Date.now() });
+  inp.value = '';
+  saveTodos();
+  renderTodos();
+}
+
+function toggleTodo(i) {
+  todos[i].done = !todos[i].done;
+  saveTodos();
+  renderTodos();
+}
+
+function deleteTodo(i) {
+  todos.splice(i, 1);
+  saveTodos();
+  renderTodos();
+}
+
+function clearDone() {
+  todos = todos.filter(t => !t.done);
+  saveTodos();
+  renderTodos();
+}
+
+renderTodos();
+
+</script>
+</body>
+</html>
